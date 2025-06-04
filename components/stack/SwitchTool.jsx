@@ -12,7 +12,6 @@ function filterStacks(stacks, type) {
 export function SwitchTool() {
   const development = filterStacks(stacks, 'development')
   const tools = filterStacks(stacks, 'tools')
-  const aiMl = filterStacks(stacks, 'ai-ml')
 
   return (
     <div className="space-y-20">
@@ -30,20 +29,7 @@ export function SwitchTool() {
           </Tool>
         ))}
       </ToolsSectionGrid>
-      <ToolsSectionGrid title="AI & Machine Learning">
-        {aiMl.map((stack, index) => (
-          <Tool
-            grid={true}
-            title={stack.title}
-            href={stack.link}
-            key={stack.title}
-            img={stack.img}
-            index={index}
-          >
-            {stack.title}
-          </Tool>
-        ))}
-      </ToolsSectionGrid>
+      
       <ToolsSectionGrid title="Tools">
         {tools.map((stack, index) => (
           <Tool
