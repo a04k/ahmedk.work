@@ -23,7 +23,7 @@ export function StatusWork({ isAvailable = true, className }) {
     status === Status[0].Available ? 'bg-lime-400' : 'bg-red-600'
   return (
     <p className={className}>
-      <span className="inline-flex items-center px-3 py-2 text-sm font-lightrounded-xl pointer-events-auto body-primary box-gen rounded-2xl font-fustat">
+      <span className="inline-flex items-center px-3 py-2 text-sm font-lightrounded-xl pointer-events-auto body-primary box-gen rounded-full font-fustat">
         <span className="mr-1.5 flex h-3 w-3 items-center ">
           <span
             className={`absolute inline-flex w-2 h-2 rounded-full opacity-75 animate-ping ${bgColorClass}`}
