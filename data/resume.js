@@ -20,7 +20,7 @@ export const resume = [
   },
   {
     index: 3,
-    company: "CIB Bank",
+    company: "Commercial International Bank",
     title: "Trainee",
     logo: "/images/companies/cib.png",
     start: "Sep '24",
