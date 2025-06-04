@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`flex flex-col min-h-screen antialiased bg-top bg-no-repeat bg-cover bg-neutral-50 bg-bluenoise dark:bg-neutral-900 font-fustat`}
+        className={`flex flex-col min-h-screen antialiased bg-top bg-no-repeat bg-cover bg-neutral-50 bg-bg dark:bg-neutral-900 font-fustat`}
         suppressHydrationWarning
       >
         <ThemeProvider

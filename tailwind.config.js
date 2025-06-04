@@ -57,7 +57,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "bluenoise": "url('/images/bg-b.png')",
+        "bg": "url('/images/bg.webp')",
         // retro-bg1
         // forest.png is cool too
       },
