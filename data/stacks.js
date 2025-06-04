@@ -39,7 +39,7 @@ export const stacks = [
     title: "Go",
     link: "https://go.dev",
     info: "Primary language of choice for any server side application",
-    img: "/images/logos/go.png",
+    img: "/images/logos/golang.png",
   },
   {
     type: "development",
