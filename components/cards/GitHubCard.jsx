@@ -171,7 +171,7 @@ function GitHubActivity({ className, username = "a04k" }) {
           </a>
           <span className="text-sm text-neutral-600 dark:text-neutral-300">
             {activityData.totalContributions.toLocaleString()} contributions in
-            the last year
+            the past year
           </span>
         </div>
       </div>
