@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { Fragment } from "react"
-import { motion } from "framer-motion"
-import { MessageCircle, ArrowRight } from "lucide-react"
+import { Fragment } from "react";
+import { motion } from "framer-motion";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Card } from "@/components/cards/Card"
-import Media from "@/components/cards/project/Media"
-import { Button } from "@/components/ui/Button"
+import { cn } from "@/lib/utils";
+import { Card } from "@/components/cards/Card";
+import Media from "@/components/cards/project/Media";
+import { Button } from "@/components/ui/Button";
 
-export const TRANSITION = { type: "spring", stiffness: 300, damping: 50 }
+export const TRANSITION = { type: "spring", stiffness: 300, damping: 50 };
 
 const parantVariants = {
   hidden: {},
@@ -18,7 +18,7 @@ const parantVariants = {
       staggerChildren: 0.15,
     },
   },
-}
+};
 
 const variants = {
   hidden: {
@@ -29,7 +29,7 @@ const variants = {
     rotateZ: 0,
   },
   visible: () => {
-    const rotate = -10 + Math.random() * 20
+    const rotate = -10 + Math.random() * 20;
 
     return {
       y: 0,
@@ -38,39 +38,47 @@ const variants = {
       rotateZ: rotate,
       rotateY: rotate / 10,
       transition: TRANSITION,
-    }
+    };
   },
-}
+};
 
 // Mock projects data as fallback
 const projectList = [
   {
-    title: "Portfolio Website",
-    cover: "/placeholder.svg?height=200&width=300",
-    publishedAt: "2024-01-15",
+    title: "Current Portfolio Website",
+    cover: "/images/projects/portfolio.png",
+    publishedAt: "2025-06-01",
   },
   {
-    title: "E-commerce Platform",
-    cover: "/placeholder.svg?height=200&width=300",
-    publishedAt: "2024-01-10",
+    title: "Old portfolio",
+    cover: "/images/projects/oldfolio.png",
+    publishedAt: "2024-06-01",
   },
   {
-    title: "Mobile App",
-    cover: "/placeholder.svg?height=200&width=300",
-    publishedAt: "2024-01-05",
+    title: "repAI",
+    cover: "/images/projects/repai1.png",
+    publishedAt: "2025-02-29",
   },
   {
-    title: "Web Application",
-    cover: "/placeholder.svg?height=200&width=300",
-    publishedAt: "2024-01-01",
+    title: "Orbit",
+    cover: "/images/projects/orbit2.png",
+    publishedAt: "2024-10-05",
   },
-]
+  // {
+  //   title: "Orbit",
+  //   cover: "/images/projects/orbit1.png",
+  //   publishedAt: "2024-10-05",
+  // },
+];
 
 function CardHome({ className, projects = projectList }) {
-  const items = projects.slice(0, 4)
+  const items = projects.slice(0, 5);
 
   return (
-    <Card as="div" className={cn("group gap-2 relative overflow-hidden", className)}>
+    <Card
+      as="div"
+      className={cn("group gap-2 relative overflow-hidden", className)}
+    >
       <Card.Pill icon={MessageCircle} className="z-10 mb-0">
         Projects
       </Card.Pill>
@@ -85,11 +93,15 @@ function CardHome({ className, projects = projectList }) {
           {items.map((project, i) => {
             return (
               <Fragment key={i}>
-                <motion.div variants={variants} className="absolute" style={{ z: i * 200 }}>
+                <motion.div
+                  variants={variants}
+                  className="absolute"
+                  style={{ z: i * 200 }}
+                >
                   <Media index={i} length={items.length} {...project} />
                 </motion.div>
               </Fragment>
-            )
+            );
           })}
         </motion.div>
 
@@ -106,11 +118,11 @@ function CardHome({ className, projects = projectList }) {
         </div>
       </div>
     </Card>
-  )
+  );
 }
 
 // Export both as default and named export
-export default CardHome
-export { CardHome }
+export default CardHome;
+export { CardHome };
 // Also export as StackProject for backward compatibility
-export const StackProject = CardHome
+export const StackProject = CardHome;
