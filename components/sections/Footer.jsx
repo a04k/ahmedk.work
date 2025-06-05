@@ -89,7 +89,7 @@ export default function Footer() {
               <ul className="space-y-1.5 md:space-y-2">
                 <li>
                   <Link
-                    href={config.socialLinks.github}
+                    href="https://github.com/a04k/ahmedk.work"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm block py-1"
                   >
                     Source code
