@@ -1,6 +1,4 @@
 import "./globals.css";
-import "focus-visible";
-import localFont from "next/font/local";
 
 import { Analytics } from "@/components/Analytics";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -11,7 +9,7 @@ import { Suspense } from "react";
 export const metadata = {
   metadataBase: new URL("https://ahmedk.work"),
   title: {
-    default: "Ahmed Khaled - Computer Science Student & Developer",
+    default: "Ahmed Khaled - swe & cs student",
     template: "%s | Ahmed Khaled",
   },
   description:
@@ -39,12 +37,14 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Ahmed Khaled",
-    card: "summary_large_image",
-  },
   icons: {
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+    other: {
+      rel: "mask-icon",
+      url: "/favicon.ico",
+    },
   },
 };
 

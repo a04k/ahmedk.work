@@ -25,11 +25,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/cv",
-        destination: "/doc/eduardo_calvo_lopez_curriculum_vitae.pdf",
-        permanent: true,
-      },
-      {
         source: "/articles/:slug*",
         destination: "/blog/:slug*",
         permanent: true,
