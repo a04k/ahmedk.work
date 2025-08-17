@@ -101,7 +101,7 @@
   }
 
   .resumeSectionTitle {
-    @apply text-2xl font-fustat mb-2 text-zinc-900 dark:text-zinc-100;
+    @apply  text-[2.5rem] md:text-5xl mb-4 title-primary font-InstrumentSerif;
   }
 
   .resumeItem {
@@ -109,7 +109,7 @@
   }
 
   .resumeContentTitle {
-    @apply text-lg font-switzer mb-2 text-zinc-800 dark:text-zinc-200;
+    @apply text-lg font-InstrumentSerif mb-2 text-zinc-800 dark:text-zinc-200;
   }
 
   .resumeContent {
@@ -118,6 +118,14 @@
 
   .resumePoint {
     @apply font-semibold text-zinc-800 dark:text-zinc-200;
+  }
+  
+  .splitter{
+    @apply  border-neutral-500 mb-8;
+  }
+  
+  .experienceImg{
+    @apply rounded-2xl bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0
   }
 
   .skill {
@@ -155,16 +163,29 @@
   .prose blockquote {
     @apply border-l-4 border-primary/20 pl-4 italic;
   }
-  
-  @font-face {
-    font-family: 'Switzer';
-    src: url('../public/fonts/Switzer.woff2');
-  }
-  
-  @font-face {
-    font-family: 'Fustat';
-    src: url('../public/fonts/Fustat.ttf');
-  }
-  
-}
 
+  @font-face {
+    font-family: "Switzer";
+    src: url("../public/fonts/Switzer.woff2");
+  }
+
+  @font-face {
+    font-family: "Fustat";
+    src: url("../public/fonts/Fustat.ttf");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("../public/fonts/Inter-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Instrument Serif";
+    src: url("../public/fonts/InstrumentSerif-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Instrument Serif Italic";
+    src: url("../public/fonts/InstrumentSerif-Italic.ttf");
+  }
+}

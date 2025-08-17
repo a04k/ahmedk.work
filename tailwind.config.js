@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         switzer: ["Switzer", "sans-serif"],
         fustat: ["Fustat", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        InstrumentSerif: ["Instrument Serif", "serif"],
+        InstrumentSerifItalic: ["Instrument Serif Italic", "serif"]
+
       },
       colors: {
         border: "hsl(var(--border))",

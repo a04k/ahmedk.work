@@ -10,31 +10,31 @@ import { Prose } from "@/components/ui/Prose";
 const components = {
   h1: ({ className, ...props }) => (
     <h1
-      className={`mt-2 scroll-m-20 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-2 scroll-m-20 text-6xl font-InstrumentSerif  tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h2: ({ className, ...props }) => (
     <h2
-      className={`mt-10 scroll-m-20 border-b border-b-neutral-300/40 dark:border-b-zinc-700/10 pb-1 text-3xl font-semibold tracking-tight first:mt-0 text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-10 scroll-m-20 border-b border-b-neutral-500/70 dark:border-b-neutral-300-700/40 pb-1 text-4xl md:text-5xl font-InstrumentSerif font-normal tracking-tight first:mt-0 text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h3: ({ className, ...props }) => (
     <h3
-      className={`mt-8 scroll-m-20 text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-8 scroll-m-20 text-2xl lg:text-3xl font-InstrumentSerif font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h4: ({ className, ...props }) => (
     <h4
-      className={`mt-8 scroll-m-20 text-xl font-semibold tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-8 scroll-m-20 text-2xl font-InstrumentSerif tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h5: ({ className, ...props }) => (
     <h5
-      className={`mt-8 scroll-m-20 text-lg font-semibold tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-8 scroll-m-20 text-lg tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),

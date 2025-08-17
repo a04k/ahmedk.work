@@ -23,24 +23,22 @@ export default function Home() {
     <>
       <Container className="mt-16 sm:mt-16">
         <div className="max-w-3xl">
-          <StatusWork isAvailable={isAvailable} />
-          <Balancer className="mt-2 text-base text-neutral-700 dark:text-white/80">
-            <BlurTitle delay={100}>
+          <StatusWork isAvailable={isAvailable} className="mb-8" />
+            <BlurTitle delay={75}>
               <DecryptedText
                 text={config.name}
-                className="text-5xl lg:text-8xl text-neutral-900 font-fustat font-extrabold dark:text-white"
-                encryptedClassName="text-5xl lg:text-8xl text-neutral-500 font-fustat font-extrabold dark:text-neutral-700"
+                className="text-5xl lg:text-8xl text-neutral-900 font-fustat font-bold dark:text-white"
+                encryptedClassName="text-5xl lg:text-8xl text-neutral-500 font-fustat font-bold dark:text-neutral-700"
                 parentClassName=""
                 animateOn="view"
                 sequential={true}
                 speed={60}
-                revealDirection="start"
               />
             </BlurTitle>
-            <BlurTitle delay={250}>
+            <BlurTitle delay={100}>
               <DecryptedText
                 text={config.description}
-                className="text-sm md:text-base dark:text-grey-400 font-mono m-0"
+                className="text-sm md:text-base dark:text-neutral-300 font-mono m-0"
                 encryptedClassName="text-sm md:text-base text-neutral-500 font-mono m-0"
                 parentClassName=""
                 animateOn="view"
@@ -49,14 +47,13 @@ export default function Home() {
                 revealDirection="start"
               />
             </BlurTitle>
-          </Balancer>
           <BlurTitle delay={300}>
             <SocialLinks />
           </BlurTitle>
         </div>
       </Container>
 
-      <BlurTitle delay={500}>
+      <BlurTitle delay={50}>
         <Container className="mt-16">
           <div className="grid grid-cols-6 gap-4 mb-2 text-left">
             {/* Featured Article */}

@@ -7,7 +7,7 @@ export function SimpleLayout({ title, intro, children }) {
     <Container className="mt-16 sm:mt-24">
       <header className="max-w-full">
         <h1 className="title-primary">
-          <Balancer className="text-6xl font-serif">{title}</Balancer>
+          <Balancer className="text-7xl font-InstrumentSerifItalic">{title}</Balancer>
         </h1>
         <p className="mt-6 text-base font-mono body-secondary">
           <Balancer>{intro}</Balancer>

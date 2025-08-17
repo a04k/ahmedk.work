@@ -102,9 +102,6 @@ export default async function PostPage({ params }) {
           </Link>
           <article className="pb-6 prose dark:prose-invert">
             <header className="flex flex-col">
-              <h1 className="mt-6 title-primary">
-                <Balancer>{post.title}</Balancer>
-              </h1>
               {sortedTags.length > 0 && (
                 <div className="inline-flex gap-2 mt-4">
                   {sortedTags.map((tag) => (
