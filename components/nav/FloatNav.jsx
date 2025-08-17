@@ -9,7 +9,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FADE_IN_ANIMATION_CARD } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import MobileNavigation from "@/components/nav/MobileNav";
-import ThemeToggle from "@/components/nav/ThemeToggle";
 import { Container } from "@/components/ui/Container";
 import Dock from "./Dock";
 
@@ -77,9 +76,6 @@ function DesktopNavigation(props) {
             );
           }
         })}
-        <div className="flex items-center pointer-events-auto">
-          <ThemeToggle />
-        </div>
       </ul>
     </nav>
   );
@@ -98,7 +94,6 @@ function FloatNav() {
             <div className="relative flex gap-4">
               <div className="flex justify-end flex-1 md:justify-center">
                 <MobileNavigation className="pointer-events-auto" />
-                <ThemeToggle className="ml-2" />
               </div>
             </div>
           </Container>

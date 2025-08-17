@@ -18,10 +18,10 @@ export default function Resume() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16">
           <div className="flex-1">
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-fustat font-extrabold title-primary">
+            <h1 className="text-7xl lg:text-7xl xl:text-8xl font-InstrumentSerif title-primary">
               Ahmed Khaled
             </h1>
-            <h2 className="text-base font-mono body-secondary">
+            <h2 className="text-sm md:text-base font-mono text-neutral-200 body-secondary">
               Computer Science Student & Software Engineer
             </h2>
           </div>
@@ -32,10 +32,10 @@ export default function Resume() {
 
         {/* Education Section */}
         <div className="resumeSection">
-          <h2 className="text-3xl font-bold mb-4 title-primary font-fustat">
+          <h2 className="resumeSectionTitle">
             Education
           </h2>
-          <hr className="border-zinc-200 dark:border-zinc-800 mb-8" />
+          <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="flex items-center gap-6 ">
               <Image
@@ -65,11 +65,10 @@ export default function Resume() {
 
         {/* Experience Section */}
         <div className="resumeSection">
-          <h2 className="text-3xl font-bold mb-4 title-primary font-fustat">
+          <h2 className="resumeSectionTitle">
             Experience
           </h2>
-          <hr className="border-zinc-200 dark:border-zinc-800 mb-8" />
-
+          <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
             <div className="flex items-center gap-6 mb-6">
               <Image
@@ -77,11 +76,11 @@ export default function Resume() {
                 alt="Banque Misr"
                 width={64}
                 height={64}
-                className="rounded-lg bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0"
+                className="experienceImg"
               />
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                  <span>Banque Misr | Intern Software QA/QC Engineer</span>
+                  <span>Banque Misr - Intern Software QA/QC Engineer</span>
                   <span className="text-lg body-secondary lg:text-xl mt-1 lg:mt-0">
                     Summer '24
                   </span>
@@ -118,11 +117,11 @@ export default function Resume() {
                 alt="CIB"
                 width={64}
                 height={64}
-                className="rounded-lg bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0"
+                className="experienceImg"
               />
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                  <span>CIB | Internship Trainee</span>
+                  <span>Commercial International Bank - Internship Trainee</span>
                   <span className="text-lg body-secondary lg:text-xl mt-1 lg:mt-0">
                     Summer '24
                   </span>
@@ -150,11 +149,11 @@ export default function Resume() {
                 alt="Open Source Community"
                 width={64}
                 height={64}
-                className="rounded-lg bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0"
+                className="experienceImg"
               />
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200">
-                  Open Source Community FCIS | Web Dev. Team Member
+                  Open Source Community FCIS - Web Dev. Team Member
                 </h3>
               </div>
             </div>
@@ -176,7 +175,7 @@ export default function Resume() {
 
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="flex items-center gap-6 mb-6">
-              <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+              <div className="w-16 h-16 rounded-lg bg-gradient-to-b from-blue-600 to-yellow-100 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
                 F
               </div>
               <div className="flex-1">
@@ -194,10 +193,10 @@ export default function Resume() {
 
         {/* Projects Section */}
         <div className="resumeSection">
-          <h2 className="text-3xl font-bold mb-4 title-primary font-fustat">
+          <h2 className="resumeSectionTitle">
             Projects
           </h2>
-          <hr className="border-zinc-200 dark:border-zinc-800 mb-8" />
+          <hr className="splitter"/>
 
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
             <h3 className="text-xl md:text-2xl font-semibold mb-3 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
@@ -286,10 +285,10 @@ export default function Resume() {
 
         {/* Skills Section */}
         <div className="resumeSection">
-          <h2 className="text-3xl font-bold mb-4 title-primary font-fustat">
+          <h2 className="resumeSectionTitle">
             Skills & Abilities
           </h2>
-          <hr className="border-zinc-200 dark:border-zinc-800 mb-8" />
+          <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="space-y-4">
               <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
@@ -337,10 +336,10 @@ export default function Resume() {
 
         {/* Hobbies Section */}
         <div className="resumeSection">
-          <h2 className="text-3xl font-bold mb-4 title-primary font-fustat">
+          <h2 className="resumeSectionTitle">
             Hobbies
           </h2>
-          <hr className="border-zinc-200 dark:border-zinc-800 mb-8" />
+          <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="space-y-4">
               <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">

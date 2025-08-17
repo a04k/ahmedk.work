@@ -29,12 +29,10 @@ export default function BlogSection({ posts = [] }) {
             <FileText className="w-4 h-4" />
             Blog
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black dark:text-white mb-4">
-            Learning, Building, and
-            <br />
-            Documenting
+          <h2 className="text-5xl lg:text-6xl font-InstrumentSerif text-black dark:text-white mb-4">
+            Learning, Building & Documenting
           </h2>
-          <p className="text-base text-black font-mono tracking-tighter  dark:text-neutral-400 max-w-2xl">
+          <p className="text-sm md:text-base text-black font-mono tracking-tighter  dark:text-neutral-300 max-w-2xl">
             Insights and experiences from my journey as a developer exploring
             ideas, overcoming challenges, or just ranting.
           </p>

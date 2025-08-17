@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Analytics } from "@/components/Analytics";
+import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { FloatNav } from "@/components/nav/FloatNav";
 import Footer from "@/components/sections/Footer";
@@ -57,8 +57,8 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className="flex-1">
