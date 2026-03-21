@@ -28,8 +28,8 @@ export default function Home() {
           <BlurTitle delay={75}>
             <DecryptedText
               text={config.name}
-              className="text-5xl lg:text-8xl text-neutral-900 font-fustat font-bold dark:text-white"
-              encryptedClassName="text-5xl lg:text-8xl text-neutral-500 font-fustat font-bold dark:text-neutral-700"
+              className="text-6xl md:text-8xl lg:text-9xl text-neutral-900 font-InstrumentSerif dark:text-white leading-tight"
+              encryptedClassName="text-6xl md:text-8xl lg:text-9xl text-neutral-500 font-InstrumentSerif dark:text-neutral-700 font-bold"
               parentClassName=""
               animateOn="view"
               sequential={true}
@@ -57,6 +57,9 @@ export default function Home() {
       <BlurTitle delay={50}>
         <Container className="mt-16">
           <div className="grid grid-cols-6 gap-4 mb-2 text-left">
+            {/* Resume */}
+            <Resume className="relative col-span-6 gap-2 h-80 sm:col-span-3 md:col-span-3 lg:col-span-3" />
+
             {/* Featured Article */}
             {allPosts
               .sort(
@@ -73,9 +76,6 @@ export default function Home() {
                   className="overflow-hidden relative col-span-6 h-80 sm:col-span-3 md:col-span-3 lg:col-span-3"
                 />
               ))}
-
-            {/* Resume */}
-            <Resume className="relative col-span-6 gap-2 h-80 sm:col-span-3 md:col-span-3 lg:col-span-3" />
 
             {/* Projects */}
             <StackProject className="overflow-hidden relative col-span-6 h-80 sm:col-span-3 md:col-span-3 lg:col-span-2" />
