@@ -10,6 +10,7 @@ import StackProject from "@/components/cards/project/CardHome";
 import Resume from "@/components/cards/resume/ResumeCard";
 import { StatusWork } from "@/components/sections/StatusWork";
 import BlogSection from "@/components/sections/BlogSection";
+import ContactSection from "@/components/sections/ContactSection";
 import { Container } from "@/components/ui/Container";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import BlurTitle from "@/components/ui/BlurTitle";
@@ -24,29 +25,29 @@ export default function Home() {
       <Container className="mt-16 sm:mt-16">
         <div className="max-w-3xl">
           <StatusWork isAvailable={isAvailable} className="mb-8" />
-            <BlurTitle delay={75}>
-              <DecryptedText
-                text={config.name}
-                className="text-5xl lg:text-8xl text-neutral-900 font-fustat font-bold dark:text-white"
-                encryptedClassName="text-5xl lg:text-8xl text-neutral-500 font-fustat font-bold dark:text-neutral-700"
-                parentClassName=""
-                animateOn="view"
-                sequential={true}
-                speed={60}
-              />
-            </BlurTitle>
-            <BlurTitle delay={100}>
-              <DecryptedText
-                text={config.description}
-                className="text-sm md:text-base dark:text-neutral-300 font-mono m-0"
-                encryptedClassName="text-sm md:text-base text-neutral-500 font-mono m-0"
-                parentClassName=""
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                revealDirection="start"
-              />
-            </BlurTitle>
+          <BlurTitle delay={75}>
+            <DecryptedText
+              text={config.name}
+              className="text-5xl lg:text-8xl text-neutral-900 font-fustat font-bold dark:text-white"
+              encryptedClassName="text-5xl lg:text-8xl text-neutral-500 font-fustat font-bold dark:text-neutral-700"
+              parentClassName=""
+              animateOn="view"
+              sequential={true}
+              speed={60}
+            />
+          </BlurTitle>
+          <BlurTitle delay={100}>
+            <DecryptedText
+              text={config.description}
+              className="text-sm md:text-base dark:text-neutral-300 font-mono m-0"
+              encryptedClassName="text-sm md:text-base text-neutral-500 font-mono m-0"
+              parentClassName=""
+              animateOn="view"
+              sequential={true}
+              speed={20}
+              revealDirection="start"
+            />
+          </BlurTitle>
           <BlurTitle delay={300}>
             <SocialLinks />
           </BlurTitle>
@@ -94,6 +95,8 @@ export default function Home() {
         <Container className="mt-24">
           <BlogSection posts={allPosts} />
         </Container>
+
+        <ContactSection />
       </BlurTitle>
     </>
   );

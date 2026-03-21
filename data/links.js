@@ -22,6 +22,11 @@ export const generalLinks = [
     icon: FileText,
   },
   {
+    href: config.links.contact,
+    label: "Contact",
+    icon: Mail,
+  },
+  {
     href: config.links.blog,
     label: "Blog",
     icon: BookOpen,

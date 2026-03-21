@@ -1,10 +1,12 @@
 import "./globals.css";
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { FloatNav } from "@/components/nav/FloatNav";
 import Footer from "@/components/sections/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import { Suspense } from "react";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata = {
   metadataBase: new URL("https://ahmedk.work"),
@@ -52,7 +54,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`flex flex-col min-h-screen antialiased bg-top bg-no-repeat bg-cover bg-neutral-50 bg-bg dark:bg-neutral-900 font-fustat`}
+        className={`grid-overlay flex flex-col min-h-screen antialiased bg-top bg-no-repeat bg-cover bg-neutral-50 bg-bg dark:bg-neutral-900 font-fustat`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -61,6 +63,7 @@ export default function RootLayout({ children }) {
           enableSystem={false}
           disableTransitionOnChange
         >
+          <SmoothScroll />
           <div className="flex-1">
             <div className="relative mb-16 sm:mb-32">
               <Suspense fallback={null}>
@@ -71,6 +74,7 @@ export default function RootLayout({ children }) {
           </div>
           <Footer />
           <Analytics />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

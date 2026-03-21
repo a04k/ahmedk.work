@@ -74,6 +74,36 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body.grid-overlay {
+    position: relative;
+  }
+
+  body.grid-overlay::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      linear-gradient(
+        to right,
+        hsl(var(--foreground) / 0.06) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(var(--foreground) / 0.06) 1px,
+        transparent 1px
+      );
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      black 60%,
+      transparent 100%
+    );
+  }
 }
 
 @layer components {
@@ -101,7 +131,7 @@
   }
 
   .resumeSectionTitle {
-    @apply  text-[2.5rem] md:text-5xl mb-4 title-primary font-InstrumentSerif;
+    @apply text-[2.5rem] md:text-5xl mb-4 title-primary font-InstrumentSerif;
   }
 
   .resumeItem {
@@ -119,13 +149,13 @@
   .resumePoint {
     @apply font-semibold text-zinc-800 dark:text-zinc-200;
   }
-  
-  .splitter{
-    @apply  border-neutral-500 mb-8;
+
+  .splitter {
+    @apply border-neutral-500 mb-8;
   }
-  
-  .experienceImg{
-    @apply rounded-2xl bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0
+
+  .experienceImg {
+    @apply rounded-2xl bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0;
   }
 
   .skill {
