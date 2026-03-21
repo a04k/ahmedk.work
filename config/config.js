@@ -17,8 +17,9 @@ const config = {
     blog: '/blog',
     projects: '/projects',
     resume: '/resume',
+    contact: '/contact',
     stack: '/stack',
-    email: 'mailto:63ahmedkhaled@gmail.com',
+    email: 'mailto:contact@ahmedk.dev',
   },
 }
 

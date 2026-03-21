@@ -1,8 +1,8 @@
-import { Briefcase } from "lucide-react"
+import { Briefcase } from "lucide-react";
 
-import { cn } from "@/lib/utils"
-import { Card } from "@/components/cards/Card"
-import SvgLogos from "./SvgLogos"
+import { cn } from "@/lib/utils";
+import { Card } from "@/components/cards/Card";
+import SvgLogos from "./SvgLogos";
 
 function StackCard({ className }) {
   return (
@@ -10,12 +10,12 @@ function StackCard({ className }) {
       <Card.Pill icon={Briefcase} className="mb-3">
         Stack
       </Card.Pill>
-      <div className="flex flex-row">
+      <div className="flex w-full flex-row">
         <SvgLogos className="w-full" />
       </div>
     </Card>
-  )
+  );
 }
 
-export default StackCard
-export { StackCard }
+export default StackCard;
+export { StackCard };

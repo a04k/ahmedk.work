@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import Balancer from "react-wrap-balancer";
 import { serialize } from "next-mdx-remote/serialize";
 import { Suspense } from "react";
+import { BackButton } from "@/components/ui/BackButton";
 
 import { Mdx } from "@/components/Mdx-components";
 import { Container } from "@/components/ui/Container";
@@ -94,12 +95,7 @@ export default async function PostPage({ params }) {
     <Container className="mt-16 lg:mt-32">
       <div className="xl:relative">
         <div className="max-w-2xl mx-auto">
-          <Link
-            href="/blog"
-            className="items-center justify-center lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-5 xl:mt-0 mb-8 flex h-10 w-10 rounded-full box-gen"
-          >
-            <ArrowLeft className="w-4 h-4 " />
-          </Link>
+          <BackButton />
           <article className="pb-6 prose dark:prose-invert">
             <header className="flex flex-col">
               {sortedTags.length > 0 && (
