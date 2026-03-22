@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import DownloadBtn from "@/components/ui/DownloadBtn";
+import BlurTitle from "@/components/ui/BlurTitle";
 
 export const metadata = {
   title: "Resume",
@@ -16,6 +17,7 @@ export default function Resume() {
     <Container className="mt-16">
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
+        <BlurTitle delay={50}>
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16">
           <div className="flex-1">
             <h1 className="text-7xl lg:text-7xl xl:text-8xl font-InstrumentSerif title-primary">
@@ -29,8 +31,10 @@ export default function Resume() {
             <DownloadBtn />
           </div>
         </div>
+        </BlurTitle>
 
         {/* Education Section */}
+        <BlurTitle delay={150}>
         <div className="resumeSection">
           <h2 className="resumeSectionTitle">
             Education
@@ -62,8 +66,10 @@ export default function Resume() {
             </div>
           </div>
         </div>
+        </BlurTitle>
 
         {/* Experience Section */}
+        <BlurTitle delay={250}>
         <div className="resumeSection">
           <h2 className="resumeSectionTitle">
             Experience
@@ -190,8 +196,10 @@ export default function Resume() {
             </p>
           </div>
         </div>
+        </BlurTitle>
 
         {/* Projects Section */}
+        <BlurTitle delay={350}>
         <div className="resumeSection">
           <h2 className="resumeSectionTitle">
             Projects
@@ -282,8 +290,10 @@ export default function Resume() {
             </p>
           </div>
         </div>
+        </BlurTitle>
 
         {/* Skills Section */}
+        <BlurTitle delay={450}>
         <div className="resumeSection">
           <h2 className="resumeSectionTitle">
             Skills & Abilities
@@ -333,8 +343,10 @@ export default function Resume() {
             </div>
           </div>
         </div>
+        </BlurTitle>
 
         {/* Hobbies Section */}
+        <BlurTitle delay={550}>
         <div className="resumeSection">
           <h2 className="resumeSectionTitle">
             Hobbies
@@ -363,6 +375,7 @@ export default function Resume() {
             </div>
           </div>
         </div>
+        </BlurTitle>
       </div>
     </Container>
   );

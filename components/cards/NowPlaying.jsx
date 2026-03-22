@@ -1,4 +1,5 @@
 import { Card } from "./Card"
+import { nowPlayingData } from "@/data/nowPlaying"
 
 export function NowPlaying() {
   return (
@@ -29,25 +30,25 @@ export function SpotifyPlayer({ className }) {
             width="64"
             height="64"
             alt="Album cover"
-            src="https://cdn-images.dzcdn.net/images/cover/07d837e8865ce86684a86fb79ccece96/0x1900-000000-80-0-0.jpg"
+            src={nowPlayingData.cover}
             className="absolute top-0 bottom-0 left-0 right-0 z-10 object-cover w-14 h-14 m-auto rounded-full aspect-square"
           />
           <div className="bg-black border border-white rounded-full shadow-md h-14 w-14 dark:border-white/10 ring-1 ring-white/10 outline outline-1 outline-offset-0 outline-zinc-200 dark:outline-[#1a1a1a]"></div>
         </div>
         <div className="inline-flex flex-col w-full max-w-full">
           <a
-            href="https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b"
+            href={nowPlayingData.songUrl}
             className="font-semibold capsize max-w-max body-primary line-clamp-1"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Timeless (feat. Playboi Carti)
+            {nowPlayingData.songName}
           </a>
-          <p className="capsize max-w-max body-secondary line-clamp-1">The Weeknd</p>
+          <p className="capsize max-w-max body-secondary line-clamp-1">{nowPlayingData.author}</p>
         </div>
         <a
           className="px-2 boxgen"
-          href="https://open.spotify.com/track/1Es7AUAhQvapIcoh3qMKDL"
+          href={nowPlayingData.songUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
