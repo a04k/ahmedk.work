@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import Image from "next/image"
+import { Image } from "@unpic/react";
 import { motion } from "framer-motion"
 
 export function JobItem({ role, scrollPosition, heightItem, roleIndex }) {

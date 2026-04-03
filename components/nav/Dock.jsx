@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { generalLinks } from "@/data/links";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
@@ -81,7 +81,7 @@ export function AppIcon({
   });
 
   return (
-    <Link href={href} rel={rel} target={target} {...props}>
+    <Link to={href} rel={rel} target={target} {...props}>
       <motion.div
         ref={ref}
         style={{ width }}

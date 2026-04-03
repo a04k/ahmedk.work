@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { Image } from "@unpic/react";
 import { formatDate } from "@/lib/formatDate";
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/cards/Card"; // Assuming Card is correctly imported

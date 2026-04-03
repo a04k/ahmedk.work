@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import { Image } from "@unpic/react";
+import { Link } from "@tanstack/react-router";
 import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
@@ -22,8 +22,7 @@ const avatarVariants = cva(
 );
 
 export const ImgAvatar = ({ className, size, ...props }) => (
-  <Link
-    href="/"
+  <Link to="/"
     aria-label="Home"
     className={cn(
       avatarVariants({ size, className }),

@@ -29,3 +29,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Claude
+.claude/
+
+# Build output
+dist/
+
+# Logs
+*.log

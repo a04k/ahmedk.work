@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
   siReact,
@@ -18,7 +18,7 @@ import {
   siTypescript,
   siNodedotjs,
   siVercel,
-} from "simple-icons/icons";
+} from "simple-icons";
 
 import { cn } from "@/lib/utils";
 
@@ -95,8 +95,7 @@ function Reel({ items, duration = 20, reverse = false }) {
       >
         {content.map((item, i) => (
           <Link
-            key={`${item.key}-${i}`}
-            href="/stack"
+            key={`${item.key}-${i}`} to="/stack"
             aria-label={item.label}
             className="block w-full"
           >
