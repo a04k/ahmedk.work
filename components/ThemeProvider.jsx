@@ -3,6 +3,8 @@ import * as React from "react"
 const ThemeContext = React.createContext(undefined)
 
 function disableAnimationForThemeChange() {
+  if (typeof window === "undefined") return
+
   const style = document.createElement("style")
   style.textContent = `*{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}`
   document.head.appendChild(style)
@@ -75,7 +77,7 @@ export function ThemeProvider({
     },
     themes,
     forcedTheme,
-    systemTheme: window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    systemTheme: typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light"
   }
 
   return <ThemeContext.Provider value={value} {...props}>{children}</ThemeContext.Provider>

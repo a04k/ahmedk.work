@@ -6,6 +6,8 @@ export default function useMouse() {
   const mouseY = useMotionValue(0)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+
     function handleMouseMove(event) {
       event.preventDefault()
       mouseX.set(event.pageX)
