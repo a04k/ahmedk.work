@@ -1,1 +1,0 @@
-function e(e){return new Date(`${e}T00:00:00Z`).toLocaleDateString(`en-US`,{day:`numeric`,month:`long`,year:`numeric`,timeZone:`UTC`})}export{e as t};
