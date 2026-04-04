@@ -1,4 +1,3 @@
-"use client";
 import { Image } from "@unpic/react";
 import { formatDate } from "@/lib/formatDate";
 import { cn } from "@/lib/utils";

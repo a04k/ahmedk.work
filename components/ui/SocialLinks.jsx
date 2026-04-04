@@ -1,4 +1,3 @@
-'use client'
 
 import { Link } from "@tanstack/react-router";
 import { linksSocial } from '@/data/links'

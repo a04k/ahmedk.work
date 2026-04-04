@@ -1,4 +1,3 @@
-"use client"
 
 import { Image } from "@unpic/react";
 import { motion, useSpring, useTransform } from "framer-motion"
