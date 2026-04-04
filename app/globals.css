@@ -167,11 +167,20 @@
     @apply max-w-none;
   }
 
-  .prose h1,
-  .prose h2,
-  .prose h3,
+  .prose h1 {
+    @apply text-6xl md:text-7xl font-normal text-foreground font-InstrumentSerif;
+  }
+
+  .prose h2 {
+    @apply text-5xl md:text-6xl font-normal text-foreground font-InstrumentSerif mt-12 mb-6;
+  }
+
+  .prose h3 {
+    @apply text-3xl md:text-4xl font-normal text-foreground font-InstrumentSerif mt-10 mb-4;
+  }
+
   .prose h4 {
-    @apply text-foreground;
+    @apply text-2xl md:text-3xl font-normal text-foreground font-InstrumentSerif mt-8 mb-4;
   }
 
   .prose p {
@@ -196,26 +205,26 @@
 
   @font-face {
     font-family: "Switzer";
-    src: url("../public/fonts/Switzer.woff2");
+    src: url("/fonts/Switzer.woff2");
   }
 
   @font-face {
     font-family: "Fustat";
-    src: url("../public/fonts/Fustat.ttf");
+    src: url("/fonts/Fustat.ttf");
   }
 
   @font-face {
     font-family: "Inter";
-    src: url("../public/fonts/Inter-Bold.ttf");
+    src: url("/fonts/Inter-Bold.ttf");
   }
 
   @font-face {
     font-family: "Instrument Serif";
-    src: url("../public/fonts/InstrumentSerif-Regular.ttf");
+    src: url("/fonts/InstrumentSerif-Regular.ttf");
   }
 
   @font-face {
     font-family: "Instrument Serif Italic";
-    src: url("../public/fonts/InstrumentSerif-Italic.ttf");
+    src: url("/fonts/InstrumentSerif-Italic.ttf");
   }
 }

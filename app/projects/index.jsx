@@ -1,16 +1,20 @@
-import { getAllProjects } from "@/lib/content"
-
+import { createFileRoute } from '@tanstack/react-router'
+import { createServerFn } from '@tanstack/react-start'
 import { ProjectCardGal } from "@/components/cards/project/ProjectCard"
 import { SimpleLayout } from "@/components/ui/SimpleLayout"
 
-export const metadata = {
-  title: "Projects",
-  description: "Projects I've built during on my journey.",
-  keywords: ["software projects, web development, AI projects, hackathon projects, open source, portfolio"],
-}
+const fetchProjects = createServerFn().handler(async () => {
+  const { getAllProjects } = await import('@/lib/server/content')
+  return getAllProjects()
+})
 
-export default function Projects() {
-  const allProjects = getAllProjects()
+export const Route = createFileRoute('/projects/')({
+  loader: () => fetchProjects(),
+  component: Projects,
+})
+
+function Projects() {
+  const allProjects = Route.useLoaderData()
 
   return (
     <>

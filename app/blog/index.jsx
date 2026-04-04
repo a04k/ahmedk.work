@@ -1,15 +1,21 @@
+import { createFileRoute } from '@tanstack/react-router'
 import SearchPost from "@/components/SearchPost"
 import { SimpleLayout } from "@/components/ui/SimpleLayout"
-import { getAllPosts } from "@/lib/content"
 
-export const metadata = {
-  title: "Blog",
-  description: "Writing about software development, technology, and my learning journey.",
-  keywords: ["software development, programming, technology, AI, machine learning, web development, computer science"],
-}
+import { createServerFn } from '@tanstack/react-start'
 
-export default function ArticlesIndex() {
-  const allPosts = getAllPosts()
+const fetchPosts = createServerFn().handler(async () => {
+  const { getAllPosts } = await import('@/lib/server/content')
+  return getAllPosts()
+})
+
+export const Route = createFileRoute('/blog/')({
+  loader: () => fetchPosts(),
+  component: ArticlesIndex,
+})
+
+function ArticlesIndex() {
+  const allPosts = Route.useLoaderData()
 
   return (
     <>

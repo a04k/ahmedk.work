@@ -1,6 +1,5 @@
-'use client'
 
-import Link from 'next/link'
+import { Link } from "@tanstack/react-router";
 import { linksSocial } from '@/data/links'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -46,7 +45,7 @@ export function SocialLinks({}) {
 export function LinkText({ className, href, children, icon: Icon, outline }) {
   return (
     <li className={cn(className, 'flex')}>
-      <Link href={href} rel="noopener noreferrer" target="_blank">
+      <Link to={href} rel="noopener noreferrer" target="_blank">
         <div className="relative group">
           <div className="absolute z-10 flex items-center justify-center w-full h-full transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
             <p className="font-semibold cursor-pointer body-primary">
@@ -77,8 +76,7 @@ export function SocialText({}) {
     <div className="lg:pl-28 ">
       <ul role="list" className="grid grid-cols-2">
         {linksSocial.map((link, index) => (
-          <LinkText
-            href={link.href}
+          <LinkText to={link.href}
             icon={link.icon}
             className="mt-4"
             key={index}

@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@tanstack/react-router";
 import { generalLinks } from "@/data/links"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import { Menu } from "lucide-react"
@@ -24,8 +24,7 @@ function MobileNavigation(props) {
                   key={index}
                   className="flex items-center px-4 py-2 text-sm cursor-pointer body-primary group focus:bg-neutral-200/40 dark:focus:bg-black/30 focus:outline-indigo-700/50"
                 >
-                  <Link
-                    href={link.href}
+                  <Link to={link.href}
                     target={link.target}
                     rel={link.target === "_blank" ? "noopener noreferrer" : ""}
                   >

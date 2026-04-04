@@ -1,7 +1,5 @@
-import Balancer from "react-wrap-balancer";
-
+import { createFileRoute } from "@tanstack/react-router";
 import config from "@/config/config";
-import { getAllPosts } from "@/lib/content";
 import Article from "@/components/cards/ArticleCard";
 import { SpotifyPlayer } from "@/components/cards/NowPlaying";
 import { GitHubActivity } from "@/components/cards/GitHubCard";
@@ -15,16 +13,27 @@ import { Container } from "@/components/ui/Container";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import BlurTitle from "@/components/ui/BlurTitle";
 import DecryptedText from "@/components/ui/DecryptedText";
+import { createServerFn } from "@tanstack/react-start";
 
-export default function Home() {
+const fetchPosts = createServerFn().handler(async () => {
+  const { getAllPosts } = await import("@/lib/server/content");
+  return getAllPosts();
+});
+
+export const Route = createFileRoute("/")({
+  loader: () => fetchPosts(),
+  component: Home,
+});
+
+function Home() {
+  const allPosts = Route.useLoaderData();
   const isAvailable = true;
-  const allPosts = getAllPosts();
 
   return (
     <>
       <Container className="mt-16 sm:mt-16">
         <div className="max-w-3xl">
-          <StatusWork isAvailable={isAvailable} className="mb-8" />
+          <StatusWork isAvailable={isAvailable} className="mb-4" />
           <BlurTitle delay={75}>
             <DecryptedText
               text={config.name}
@@ -36,11 +45,11 @@ export default function Home() {
               speed={60}
             />
           </BlurTitle>
-          <BlurTitle delay={100}>
+          <BlurTitle delay={100} className="-mt-2">
             <DecryptedText
               text={config.description}
-              className="text-sm md:text-base dark:text-neutral-300 font-mono m-0"
-              encryptedClassName="text-sm md:text-base text-neutral-500 font-mono m-0"
+              className="text-[0.875rem] md:text-base dark:text-neutral-300 font-mono m-0"
+              encryptedClassName="text-[0.875rem] md:text-base text-neutral-500 font-mono m-0"
               parentClassName=""
               animateOn="view"
               sequential={true}
@@ -48,7 +57,7 @@ export default function Home() {
               revealDirection="start"
             />
           </BlurTitle>
-          <BlurTitle delay={300}>
+          <BlurTitle delay={300} className="mt-3">
             <SocialLinks />
           </BlurTitle>
         </div>

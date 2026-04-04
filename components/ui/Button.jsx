@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from "@tanstack/react-router";
 import { cva } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
@@ -30,7 +30,7 @@ export function Button({ styleBtn, className, href, ...props }) {
   )
 
   return href ? (
-    <Link href={href} className={className} {...props} />
+    <Link to={href} className={className} {...props} />
   ) : (
     <button className={className} {...props} />
   )

@@ -1,4 +1,3 @@
-"use client"
 
 import { Suspense, useState } from "react"
 import { Search } from "lucide-react"
