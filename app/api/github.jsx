@@ -16,6 +16,16 @@ export const Route = createFileRoute('/api/github')({
         from.setFullYear(to.getFullYear() - 1)
 
         try {
+          const token = process.env.GITHUB_TOKEN || import.meta.env?.GITHUB_TOKEN
+
+          if (!token) {
+            console.error('GITHUB_TOKEN is not configured')
+            return Response.json(
+              { error: 'GitHub token is not configured' },
+              { status: 500 }
+            )
+          }
+
           const query = `
             query ($username: String!, $from: DateTime!, $to: DateTime!) {
               user(login: $username) {
@@ -47,8 +57,9 @@ export const Route = createFileRoute('/api/github')({
           const response = await fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
-              Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+              Authorization: `Bearer ${token}`,
               'Content-Type': 'application/json',
+              'User-Agent': 'ahmedk-dev-portfolio',
             },
             body: JSON.stringify({
               query,
@@ -60,14 +71,18 @@ export const Route = createFileRoute('/api/github')({
             }),
           })
 
-          const data = await response.json()
-
+          // Check response status BEFORE trying to parse JSON
           if (!response.ok) {
+            const errorText = await response.text()
+            console.error(`GitHub API error ${response.status}: ${errorText}`)
             return Response.json(
               { error: `GitHub API error: ${response.status}` },
               { status: response.status }
             )
           }
+
+          // Now safe to parse JSON since we confirmed a successful response
+          const data = await response.json()
 
           if (data.errors) {
             return Response.json({ error: data.errors[0].message }, { status: 500 })
