@@ -1,18 +1,14 @@
-import Image from "next/image";
+import { createFileRoute } from '@tanstack/react-router'
+import { Image } from "@unpic/react"; // Note: will be refactored to @unpic/react globally soon
 import { Container } from "@/components/ui/Container";
 import DownloadBtn from "@/components/ui/DownloadBtn";
 import BlurTitle from "@/components/ui/BlurTitle";
 
-export const metadata = {
-  title: "Resume",
-  description:
-    "Ahmed Khaled - Computer Science Student & Software Engineer Resume",
-  keywords: [
-    "Ahmed Khaled, resume, computer science, software engineer, developer, Cairo, Egypt",
-  ],
-};
+export const Route = createFileRoute('/resume')({
+  component: Resume,
+})
 
-export default function Resume() {
+function Resume() {
   return (
     <Container className="mt-16">
       <div className="max-w-5xl mx-auto">

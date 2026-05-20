@@ -1,7 +1,6 @@
-"use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import { Image } from "@unpic/react";
+import { Link } from "@tanstack/react-router";
 import { MDXRemote } from "next-mdx-remote";
 
 import { Pill } from "@/components/ui/Pill";
@@ -10,37 +9,37 @@ import { Prose } from "@/components/ui/Prose";
 const components = {
   h1: ({ className, ...props }) => (
     <h1
-      className={`mt-2 scroll-m-20 text-6xl font-InstrumentSerif  tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-2 scroll-m-20 text-6xl md:text-7xl font-InstrumentSerif font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h2: ({ className, ...props }) => (
     <h2
-      className={`mt-10 scroll-m-20 border-b border-b-neutral-500/70 dark:border-b-neutral-300-700/40 pb-1 text-4xl md:text-5xl font-InstrumentSerif font-normal tracking-tight first:mt-0 text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-12 scroll-m-20 border-b border-b-neutral-500/70 dark:border-b-neutral-300-700/40 pb-2 text-5xl md:text-6xl font-InstrumentSerif font-normal tracking-tight first:mt-0 text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h3: ({ className, ...props }) => (
     <h3
-      className={`mt-8 scroll-m-20 text-2xl lg:text-3xl font-InstrumentSerif font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-10 scroll-m-20 text-3xl lg:text-4xl font-InstrumentSerif font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h4: ({ className, ...props }) => (
     <h4
-      className={`mt-8 scroll-m-20 text-2xl font-InstrumentSerif tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-10 scroll-m-20 text-2xl md:text-3xl font-InstrumentSerif font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h5: ({ className, ...props }) => (
     <h5
-      className={`mt-8 scroll-m-20 text-lg tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-8 scroll-m-20 text-lg font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),
   h6: ({ className, ...props }) => (
     <h6
-      className={`mt-8 scroll-m-20 text-base font-semibold tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
+      className={`mt-8 scroll-m-20 text-base font-normal tracking-tight text-neutral-900 dark:text-white ${className || ""}`}
       {...props}
     />
   ),

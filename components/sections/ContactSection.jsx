@@ -1,9 +1,8 @@
-"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, ArrowUpRight, Send, Loader2, CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -142,7 +141,7 @@ export default function ContactSection() {
                     {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>}
                   </div>
                   <div className="flex items-center justify-between mt-2">
-                    <Link href="/contact" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-1">
+                    <Link to="/contact" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-1">
                       <span>Full form</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </Link>

@@ -1,8 +1,6 @@
-"use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link, useLocation } from "@tanstack/react-router";
 import { generalLinks } from "@/data/links";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -13,13 +11,12 @@ import { Container } from "@/components/ui/Container";
 import Dock from "./Dock";
 
 function NavItem({ href, children, target, rel, onMouseEnter, onMouseLeave }) {
-  const isActive = useRouter().pathname === href;
+  const isActive = useLocation().pathname === href;
   return (
     <li className="flex items-center">
       <Link
         target={target}
-        rel={rel}
-        href={href}
+        rel={rel} to={href}
         className={cn(
           "relative block px-3  transition",
           isActive

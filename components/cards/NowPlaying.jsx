@@ -11,7 +11,7 @@ export function NowPlaying() {
         />
       </svg>
       <div className="flex flex-col gap-1">
-        <p className="text-xs text-neutral-500 dark:text-neutral-400">Not playing</p>
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">Not playing</p>
         <p className="font-medium">Spotify</p>
       </div>
     </Card>

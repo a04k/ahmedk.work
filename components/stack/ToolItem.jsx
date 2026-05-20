@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@unpic/react";
 
 import { Card } from "@/components/cards/Card";
 import LinkArrow from "@/components/ui/LinkArrow";

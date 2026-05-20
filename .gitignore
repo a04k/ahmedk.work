@@ -30,6 +30,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Claude
+.claude/
+
+# Build output
+dist/
+
+# Logs
 *.log
-/.claude
-/dist

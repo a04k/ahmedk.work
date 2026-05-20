@@ -1,16 +1,12 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { SwitchTool } from '@/components/stack/SwitchTool'
 import { SimpleLayout } from '@/components/ui/SimpleLayout'
 
-export const metadata = {
-  title: 'Stack',
-  description:
-    'The technologies I use, tools I love, and other things I recommend.',
-  keywords: [
-    'tech stack, development tools, programming languages, frameworks, software development, web development',
-  ],
-}
+export const Route = createFileRoute('/stack')({
+  component: Uses,
+})
 
-export default function Uses() {
+function Uses() {
   return (
     <SimpleLayout
       title="The technologies I use, tools I love, and other things I recommend."

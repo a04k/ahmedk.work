@@ -1,6 +1,5 @@
-"use client"
 
-import Image from "next/image"
+import { Image } from "@unpic/react";
 import { motion, useSpring, useTransform } from "framer-motion"
 
 import useMouse from "@/components/cards/project/UseMouse"

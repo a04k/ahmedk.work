@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { ChevronsRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -8,10 +8,12 @@ export function Card({ as: Component = "div", className, children }) {
   return (
     <Component
       className={cn(
-        "group relative flex flex-col items-start rounded-2xl box-gen p-4 shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60",
+        "group relative flex flex-col items-start rounded-2xl box-gen p-4 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60",
         className,
       )}
     >
+      <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-transparent dark:from-white/5 dark:via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-100/50 to-transparent dark:via-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full pointer-events-none" />
       {children}
     </Component>
   );
@@ -67,7 +69,10 @@ Card.Title = function CardTitle({
 Card.Description = function CardDescription({ children, className, ...props }) {
   return (
     <p
-      className={cn("relative z-10 text-sm body-secondary", className)}
+      className={cn(
+        "relative z-10 text-sm leading-relaxed body-secondary",
+        className,
+      )}
       {...props}
     >
       {children}

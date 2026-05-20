@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { Github, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react";
 import config from "@/config/config";
 
@@ -18,22 +18,19 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex space-x-4 mb-6 md:mb-8">
-              <Link
-                href={config.socialLinks.github}
+              <Link to={config.socialLinks.github}
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </Link>
-              <Link
-                href={config.socialLinks.linkedin}
+              <Link to={config.socialLinks.linkedin}
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </Link>
-              <Link
-                href={config.links.email}
+              <Link to={config.links.email}
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -55,24 +52,21 @@ export default function Footer() {
               </h4>
               <ul className="space-y-1.5 md:space-y-2">
                 <li>
-                  <Link
-                    href="/projects"
+                  <Link to="/projects"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm block py-1"
                   >
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/blog"
+                  <Link to="/blog"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm block py-1"
                   >
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/stack"
+                  <Link to="/stack"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm block py-1"
                   >
                     Stack
@@ -88,8 +82,7 @@ export default function Footer() {
               </h4>
               <ul className="space-y-1.5 md:space-y-2">
                 <li>
-                  <Link
-                    href="https://github.com/a04k/ahmedk.work"
+                  <Link to="https://github.com/a04k/ahmedk.work"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm block py-1"
                   >
                     Source code
@@ -106,8 +99,7 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-1.5 md:space-y-2">
                   <li>
-                    <Link
-                      href={config.socialLinks.linkedin}
+                    <Link to={config.socialLinks.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm inline-flex items-center gap-1 py-1"
