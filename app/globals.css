@@ -136,8 +136,7 @@
   .box-gen {
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
-    backdrop-filter: blur(16px) saturate(140%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+    @apply backdrop-blur-lg backdrop-saturate-[140%];
     box-shadow:
       0 12px 32px rgba(0, 0, 0, 0.35),
       inset 0 1px 0 rgba(255, 255, 255, 0.15),

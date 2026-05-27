@@ -21,7 +21,7 @@ export default function BlurTitle({ children, className, delay = 0 }) {
       )}
       style={
         isLoaded
-          ? { opacity: 1 }
+          ? undefined
           : {
               filter: "blur(4px)",
               opacity: 0,
