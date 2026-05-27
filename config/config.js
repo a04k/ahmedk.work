@@ -1,6 +1,6 @@
 const config = {
   name: 'Ahmed Khaled',
-  description: 'senior computer science student & swe, chronically online',
+  description: 'senior computer science student & swe',
   about:
     `I'm a Computer Science student based in Cairo, Egypt, currently attending Ain Shams University. I enjoy writing (sometimes terrible) code and building innovative solutions.`,
   siteUrl: 'https://ahmedk.work',
