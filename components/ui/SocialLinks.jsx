@@ -9,9 +9,9 @@ function SocialLink({ icon: Icon, outline, ...props }) {
   return (
     <Link className="p-1 -m-1 group" {...props}>
       {outline ? (
-        <Icon className="w-6 h-6 stroke-[1.5px] transition text-neutral-900 group-hover:text-neutral-900 dark:text-zinc-400 dark:group-hover:text-outline-300 outline-zinc-900 group-hover:outline-zinc-900 dark:outline-zinc-400 dark:group-hover:text-zinc-300" />
+        <Icon className="w-6 h-6 stroke-[1.5px] transition text-zinc-400 group-hover:text-white" />
       ) : (
-        <Icon className="w-6 h-6 transition fill-neutral-900 group-hover:fill-neutral-900 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+        <Icon className="w-6 h-6 transition fill-zinc-400 group-hover:fill-white" />
       )}
     </Link>
   )
@@ -32,7 +32,7 @@ export function SocialLinks({}) {
             rel="noopener noreferrer"
             target="_blank"
             aria-label={link.label}
-            className="transition-all group-hover:opacity-20 group-hover:blur-sm sm:h-7 blur-0 grayscale-0"
+            className="transition-all group-hover:opacity-20 group-hover-blur sm:h-7 grayscale-0"
             icon={link.icon}
             outline={link.outline}
           />
@@ -55,7 +55,7 @@ export function LinkText({ className, href, children, icon: Icon, outline }) {
               <ArrowUpRight className="absolute w-4 h-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
             </div>
           </div>
-          <div className="flex text-sm font-medium transition-all group body-secondary group-hover:opacity-20 group-hover:blur-sm sm:h-7 blur-0 grayscale-0">
+          <div className="flex text-sm font-medium transition-all group body-secondary group-hover:opacity-20 group-hover-blur sm:h-7 grayscale-0">
             {outline ? (
               <Icon className="w-6 h-6 stroke-[1.5px] transition text-neutral-700 group-hover:body-secondary dark:group-hover:text-outline-300 outline-zinc-600 group-hover:outline-zinc-600 dark:outline-zinc-400 dark:group-hover:text-zinc-300 dark:stroke-zinc-400" />
             ) : (

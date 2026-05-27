@@ -8,7 +8,7 @@ export function Card({ as: Component = "div", className, children }) {
   return (
     <Component
       className={cn(
-        "group relative flex flex-col items-start rounded-2xl box-gen p-4 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60",
+        "group relative flex flex-col items-start rounded-2xl box-gen p-4 transition-all duration-300 overflow-hidden",
         className,
       )}
     >
@@ -50,7 +50,7 @@ Card.Title = function CardTitle({
   return (
     <Component
       className={cn(
-        "text-base font-semibold tracking-tight body-primary",
+        "text-lg font-InstrumentSerif leading-snug text-white",
         className,
       )}
       {...props}

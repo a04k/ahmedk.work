@@ -24,34 +24,39 @@ function Post() {
   const sortedTags = (post.tags || []).sort((a, b) => a.localeCompare(b))
 
   return (
-    <Container className="mt-16 lg:mt-32">
+    <Container className="mt-16 lg:mt-24">
       <div className="xl:relative">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <BackButton />
-          <article className="pb-6 prose dark:prose-invert">
-            <header className="flex flex-col">
-              <div className="flex items-center order-first text-base text-neutral-700 dark:text-zinc-400">
-                <span className="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-zinc-500" />
-                <span className="ml-3">{post.publishedAt}</span>
-              </div>
-              <h1 className="mt-6 text-5xl font-normal tracking-tight text-zinc-800 dark:text-zinc-100 font-InstrumentSerif sm:text-6xl">
-                {post.title}
-              </h1>
-              {sortedTags.length > 0 && (
-                <div className="inline-flex flex-wrap gap-2 mt-4">
-                  {sortedTags.map((tag) => (
-                    <div
-                      key={tag}
-                      className="px-2 py-1 text-xs rounded-md box-gen before:content-['#']"
-                    >
-                      {tag}
-                    </div>
-                  ))}
+          <div className="box-gen rounded-2xl p-6 md:p-8 md:px-10 min-h-[calc(100dvh-16rem)]">
+            <article>
+              <header className="flex flex-col mb-12">
+                <div className="flex items-center text-sm text-zinc-400 mb-4">
+                  <span className="h-3 w-0.5 rounded-full bg-zinc-500 mr-3" />
+                  <span>{post.publishedAt}</span>
                 </div>
-              )}
-            </header>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} className='mt-10'/>
-          </article>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-InstrumentSerif text-white leading-tight">
+                  {post.title}
+                </h1>
+                {sortedTags.length > 0 && (
+                  <div className="inline-flex flex-wrap gap-2 mt-6">
+                    {sortedTags.map((tag) => (
+                      <div
+                        key={tag}
+                        className="px-3 py-1 text-xs rounded-full text-zinc-300 bg-white/5"
+                      >
+                        #{tag}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </header>
+              <div
+                dangerouslySetInnerHTML={{ __html: post.content }}
+                className="prose dark:prose-invert max-w-none"
+              />
+            </article>
+          </div>
         </div>
       </div>
     </Container>

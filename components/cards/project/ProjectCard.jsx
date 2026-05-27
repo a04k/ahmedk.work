@@ -7,29 +7,31 @@ export function ProjectCardHome({ project, className, index }) {
   return (
     <div
       className={cn(
-        "relative h-[240px] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200",
+        "relative h-[240px] rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200",
         className,
       )}
     >
-      {project.cover && (
-        <Image
-          src={project.cover || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          className="object-cover"
-          priority={index <= 1}
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
-      <a
-        href={project.slug}
-        className="absolute inset-0 z-20"
-        aria-label={project.title}
-      ></a>
-      <div className="absolute z-30 flex flex-row items-center justify-between w-full p-4 text-white bottom-2">
+      <div className="absolute inset-0 overflow-hidden rounded-lg">
+        {project.cover && (
+          <Image
+            src={project.cover || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover"
+            priority={index <= 1}
+          />
+        )}
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/5 to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 box-gen px-4 py-3 flex items-center justify-between text-white z-20">
         <p>{project.title}</p>
         <p>{formatDate(project.publishedAt)}</p>
       </div>
+      <a
+        href={project.slug}
+        className="absolute inset-0 z-30"
+        aria-label={project.title}
+      ></a>
     </div>
   );
 }
@@ -39,37 +41,31 @@ export function ProjectCardGal({ project, className, index }) {
     <Card
       as="div"
       key={project.title}
-      className={cn("p-0 h-[240px]", className)}
+      className={cn("p-0 h-[240px] overflow-visible", className)}
     >
-      {/* The main content container within Card. It establishes a stacking context. */}
-      <div className="relative w-full h-full overflow-hidden rounded-lg">
-        {project.cover && (
-          <Image
-            src={project.cover || "/placeholder.svg"}
-            alt={project.title}
-            fill
-            className="object-cover" // Base layer
-            priority={index <= 1}
-          />
-        )}
-        {/* Original gradient overlay, positioned above the image */}
-        <div className="absolute z-10 w-full h-full -bottom-[64px] bg-gradient-to-t from-neutral-900 to-transparent"></div>
-
-        {/* Full card link overlay, positioned above gradient and image */}
+      <div className="relative w-full h-full rounded-2xl">
+        <div className="absolute inset-0 overflow-hidden rounded-2xl">
+          {project.cover && (
+            <Image
+              src={project.cover || "/placeholder.svg"}
+              alt={project.title}
+              fill
+              className="object-cover object-center"
+              priority={index <= 1}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          )}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/5 to-transparent z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 box-gen px-4 py-3 flex items-center justify-between z-20">
+          <p className="text-sm font-InstrumentSerif text-white">{project.title}</p>
+          <p className="text-xs text-zinc-300">{formatDate(project.publishedAt)}</p>
+        </div>
         <a
           href={project.slug}
-          className="absolute inset-0 z-20"
+          className="absolute inset-0 z-30"
           aria-label={`View project ${project.title}`}
         ></a>
-
-        {/* The Card.Link that was rendering the title at the top-left has been removed. */}
-        {/* <Card.Link href={project.slug}>{project.title}</Card.Link> */}
-
-        {/* Bottom text, positioned above the link overlay to ensure it's visible and readable */}
-        <span className="absolute z-30 flex flex-row items-center justify-between w-full h-8 p-4 text-white flex-nowrap bottom-2">
-          <p>{project.title}</p>
-          <p>{formatDate(project.publishedAt)}</p>
-        </span>
       </div>
     </Card>
   );

@@ -17,11 +17,17 @@ export default function BlurTitle({ children, className, delay = 0 }) {
     <div
       className={cn(
         "transition-all duration-1000 ease-out",
-        isLoaded
-          ? "blur-none opacity-100 translate-y-0"
-          : "blur-sm opacity-0 translate-y-4",
         className,
       )}
+      style={
+        isLoaded
+          ? { opacity: 1 }
+          : {
+              filter: "blur(4px)",
+              opacity: 0,
+              transform: "translateY(1rem)",
+            }
+      }
     >
       {children}
     </div>

@@ -6,10 +6,10 @@ export function SimpleLayout({ title, intro, children }) {
     <Container className="mt-16 sm:mt-24">
       <BlurTitle delay={50}>
         <header className="max-w-full">
-          <h1 className="title-primary text-7xl font-InstrumentSerifItalic text-balance">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-InstrumentSerif text-white leading-none text-balance">
             {title}
           </h1>
-          <p className="mt-6 text-base font-mono body-secondary text-balance">
+          <p className="mt-6 text-sm md:text-base text-zinc-300 font-pixel leading-relaxed max-w-2xl tracking-wide">
             {intro}
           </p>
         </header>

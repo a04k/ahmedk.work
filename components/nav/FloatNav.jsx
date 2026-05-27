@@ -83,7 +83,7 @@ function FloatNav() {
     <>
       <Dock className="hidden pointer-events-auto md:flex" />
       <motion.header
-        className="fixed z-10 flex flex-col w-full bottom-8 md:hidden"
+        className="fixed z-50 flex flex-col w-full bottom-8 md:hidden"
         {...FADE_IN_ANIMATION_CARD}
       >
         <div className="h-16">

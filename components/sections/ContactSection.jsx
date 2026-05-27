@@ -67,10 +67,10 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-5xl lg:text-6xl font-InstrumentSerif text-black dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-InstrumentSerif text-white leading-tight mb-4">
             Let's work together
           </h2>
-          <p className="mt-4 text-lg leading-8 text-neutral-600 dark:text-neutral-400">
+          <p className="mt-4 text-base md:text-lg leading-relaxed text-zinc-300 font-fustat">
             I'm currently available for freelance projects and open to new
             opportunities. If you have a project in mind or just want to say hi,
             feel free to reach out.
@@ -117,18 +117,18 @@ export default function ContactSection() {
                         {...register("name")}
                         type="text"
                         placeholder="Name"
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-800/50 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 transition-all text-neutral-900 dark:text-white text-sm"
+                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 text-sm"
                       />
-                      {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>}
+                      {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name.message}</p>}
                     </div>
                     <div>
                       <input
                         {...register("email")}
                         type="email"
                         placeholder="Email"
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-800/50 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 transition-all text-neutral-900 dark:text-white text-sm"
+                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 text-sm"
                       />
-                      {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>}
+                      {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email.message}</p>}
                     </div>
                   </div>
                   <div>
@@ -136,19 +136,19 @@ export default function ContactSection() {
                       {...register("message")}
                       rows={3}
                       placeholder="Message"
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-800/50 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 transition-all text-neutral-900 dark:text-white resize-none text-sm"
+                      className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 resize-none text-sm"
                     />
-                    {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>}
+                    {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message.message}</p>}
                   </div>
                   <div className="flex items-center justify-between mt-2">
-                    <Link to="/contact" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-1">
+                    <Link to="/contact" className="text-sm text-zinc-500 hover:text-white transition-colors flex items-center gap-1">
                       <span>Full form</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </Link>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-zinc-900 px-6 py-2.5 text-white transition-all hover:scale-[1.02] active:scale-[0.98] dark:bg-zinc-100 dark:text-zinc-900 disabled:opacity-70 disabled:hover:scale-100 text-sm font-medium"
+                      className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl box-gen px-6 py-2.5 text-white transition-all hover:bg-white/20 active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 text-sm font-medium"
                     >
                       {isSubmitting ? (
                         <Loader2 className="w-4 h-4 animate-spin" />

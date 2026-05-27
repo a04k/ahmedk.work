@@ -8,6 +8,7 @@
     "bundle-content": "node scripts/bundle-content.js",
     "build": "bun run bundle-content && vite build",
     "preview": "vite preview",
+    "start": "vite preview",
     "deploy": "bun run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
@@ -75,8 +76,12 @@
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
     "typescript": "^5.7.0",
-    "vite": "^8.0.0",
-    "vite-tsconfig-paths": "^5.1.0",
-    "wrangler": "^4.80.0"
-  }
+    "vite": "^8.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
 }

@@ -36,5 +36,8 @@ next-env.d.ts
 # Build output
 dist/
 
+# Local documentation (not tracked)
+docs/
+
 # Logs
 *.log

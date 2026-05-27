@@ -21,9 +21,9 @@ export default function SearchPost({ posts = [] }) {
           type="text"
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search articles by title or topic"
-          className="block w-full px-4 py-2 rounded-full text-neutral-700 backdrop-blur-sm placeholder:text-neutral-700 hover:text-neutral-900 dark:text-zinc-400 placeholder:dark:text-zinc-300 dark:hover:text-white box-gen"
+          className="block w-full px-5 py-3 rounded-full text-zinc-200 placeholder:text-zinc-500 hover:bg-white/10 focus:outline-none focus:ring-1 focus:ring-white/20 box-gen"
         />
-        <Search className="absolute w-5 h-5 right-3 top-3 body-primary" />
+        <Search className="absolute w-4 h-4 right-5 top-3.5 text-zinc-400" />
       </div>
       <Suspense fallback={null}>
         {!filteredBlogPosts.length && searchValue && <p className="mb-4 body-secondary">No articles found.</p>}

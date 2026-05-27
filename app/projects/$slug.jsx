@@ -27,50 +27,55 @@ function Project() {
   return (
     <Container className="mt-16 lg:mt-32">
       <div className="xl:relative">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <BackButton />
-          <article className="pb-6 prose dark:prose-invert">
-            <header className="flex flex-col">
-              {sortedTags.length > 0 && (
-                <div className="inline-flex gap-2 mt-4">
-                  {sortedTags.map((tag) => (
-                    <div
-                      key={tag}
-                      className="px-2 py-1 text-xs rounded-md box-gen before:content-['#']"
-                    >
-                      {tag}
-                    </div>
-                  ))}
+          <div className="box-gen rounded-2xl p-6 md:p-8 md:px-10 min-h-[calc(100dvh-16rem)]">
+            <article className="prose dark:prose-invert max-w-none">
+              <header className="flex flex-col">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-InstrumentSerif text-white leading-tight mb-8">
+                  {project.title}
+                </h1>
+                {sortedTags.length > 0 && (
+                  <div className="inline-flex gap-2 mb-4">
+                    {sortedTags.map((tag) => (
+                      <div
+                        key={tag}
+                        className="px-2 py-1 text-xs rounded-md box-gen before:content-['#']"
+                      >
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <div className="flex items-center text-base text-neutral-700 dark:text-zinc-400 mb-6">
+                  <span className="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-zinc-500" />
+                  <span className="ml-3">{project.publishedAt}</span>
+                </div>
+              </header>
+              {project.cover && (
+                <Image
+                  src={project.cover}
+                  alt={project.title}
+                  width={720}
+                  height={405}
+                  className="my-8 transition-colors border rounded-md bg-muted mx-auto"
+                />
+              )}
+              <div dangerouslySetInnerHTML={{ __html: project.content }} />
+              {project.link && (
+                <div className="mt-6">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium"
+                  >
+                    Visit Project →
+                  </a>
                 </div>
               )}
-              <div className="flex items-center order-first text-base text-neutral-700 dark:text-zinc-400">
-                <span className="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-zinc-500" />
-                <span className="ml-3">{project.publishedAt}</span>
-              </div>
-            </header>
-            {project.cover && (
-              <Image
-                src={project.cover}
-                alt={project.title}
-                width={720}
-                height={405}
-                className="my-8 transition-colors border rounded-md bg-muted"
-              />
-            )}
-            <div dangerouslySetInnerHTML={{ __html: project.content }} />
-            {project.link && (
-              <div className="mt-6">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium"
-                >
-                  Visit Project →
-                </a>
-              </div>
-            )}
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </Container>

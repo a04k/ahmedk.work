@@ -86,7 +86,7 @@ function CardHome({ className, projects = projectList }) {
           initial="hidden"
           animate="visible"
           variants={parantVariants}
-          className="relative flex items-center justify-center transition group-hover:blur-sm group-hover:scale-95"
+          className="relative flex items-center justify-center transition group-hover-blur group-hover:scale-95"
           style={{ width: 260, height: 160 }}
         >
           {items.map((project, i) => {

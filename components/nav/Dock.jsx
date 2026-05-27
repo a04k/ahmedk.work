@@ -18,14 +18,14 @@ export function Dock({ className }) {
   return (
     <div
       className={cn(
-        "fixed z-10 flex flex-col bottom-8 left-1/2 -translate-x-1/2",
+        "fixed z-50 flex flex-col bottom-8 left-1/2 -translate-x-1/2",
         className,
       )}
     >
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Number.POSITIVE_INFINITY)}
-        className="flex items-end h-16 gap-4 px-4 pb-2.5 mx-auto outline-0 rounded-2xl box-gen ring-1 ring-zinc-200 dark:ring-[#1a1a1a]"
+        className="flex items-end h-16 gap-4 px-4 pb-2.5 mx-auto outline-0 rounded-2xl box-gen ring-1 ring-white/10"
       >
         {generalLinks.map((link, i) => {
           return (

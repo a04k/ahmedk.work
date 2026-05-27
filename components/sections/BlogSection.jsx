@@ -22,25 +22,25 @@ export default function BlogSection({ posts = [] }) {
       )}
     >
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-start justify-between mb-10">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-sm font-medium text-black bg-white/90 dark:bg-black/60 dark:text-white rounded-full box-gen">
-            <FileText className="w-4 h-4" />
-            Blog
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-5 text-sm text-zinc-300 uppercase tracking-widest bg-white/5 rounded-full box-gen font-pixel">
+            <FileText className="w-3 h-3" />
+            Writing
           </div>
-          <h2 className="text-5xl lg:text-6xl font-InstrumentSerif text-black dark:text-white mb-4">
-            Learning, Building & Documenting
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-InstrumentSerif text-white leading-tight mb-4">
+            Learning, Building &amp; Documenting
           </h2>
-          <p className="text-sm md:text-base text-black font-mono tracking-tighter  dark:text-neutral-300 max-w-2xl">
+          <p className="text-sm md:text-base text-zinc-300 font-pixel leading-relaxed max-w-2xl tracking-wide">
             Insights and experiences from my journey as a developer exploring
             ideas, overcoming challenges, or just ranting.
           </p>
         </div>
         <Link to="/blog"
-          className="hidden sm:flex items-center gap-2 px-6 py-3 text-sm font-medium text-neutral-900 dark:text-white  rounded-full bg-white/30 dark:bg-black/20 backdrop-blur-sm hover:bg-white/50 dark:hover:bg-black/30 box-gen transition-all duration-300"
+          className="hidden sm:flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-zinc-200 rounded-full bg-white/5 hover:bg-white/10 box-gen transition-all duration-300 shrink-0 mt-2"
         >
-          View all articles
-          <ArrowRight size={16} />
+          View all
+          <ArrowRight size={14} />
         </Link>
       </div>
 

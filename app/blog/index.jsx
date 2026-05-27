@@ -23,7 +23,7 @@ function ArticlesIndex() {
         title="Blog."
         intro={`When I'm not coding or studying, you can find me writing and ranting about anything really.`}
       >
-        <div className="md:border-l md:border-zinc-400/40 md:pl-6 md:dark:border-white/10">
+        <div className="md:border-l md:border-white/10 md:pl-8">
           <SearchPost posts={allPosts} />
         </div>
       </SimpleLayout>

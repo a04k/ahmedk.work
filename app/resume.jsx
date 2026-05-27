@@ -19,7 +19,7 @@ function Resume() {
             <h1 className="text-7xl lg:text-7xl xl:text-8xl font-InstrumentSerif title-primary">
               Ahmed Khaled
             </h1>
-            <h2 className="text-sm md:text-base font-mono text-neutral-200 body-secondary">
+            <h2 className="text-xs md:text-sm text-zinc-400 font-pixel leading-relaxed mt-2">
               Computer Science Student & Software Engineer
             </h2>
           </div>
@@ -43,19 +43,19 @@ function Resume() {
                 alt="Ain Shams University"
                 width={64}
                 height={64}
-                className="rounded-lg bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0"
+                className="rounded-lg bg-white/10 p-2 border border-white/10 flex-shrink-0"
               />
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold mb-2 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between">
+                <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-2 text-white flex flex-col lg:flex-row lg:justify-between">
                   <span>Ain Shams University</span>
-                  <span className="text-lg body-secondary lg:text-xl">
+                  <span className="text-lg text-zinc-400 lg:text-xl">
                     Cairo, Egypt
                   </span>
                 </h3>
-                <p className="text-base md:text-base text-zinc-700 dark:text-zinc-300">
+                <p className="text-base text-zinc-300">
                   Pursuing a Bachelor's Degree in Computer Science
                 </p>
-                <p className="text-base md:text-base text-zinc-700 dark:text-zinc-300">
+                <p className="text-base text-zinc-300">
                   Expected Graduation: 2026
                 </p>
               </div>
@@ -78,35 +78,35 @@ function Resume() {
                 alt="Banque Misr"
                 width={64}
                 height={64}
-                className="experienceImg"
+                className="rounded-xl bg-white/10 p-2 border border-white/10 flex-shrink-0"
               />
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-2 text-white flex flex-col lg:flex-row lg:justify-between lg:items-center">
                   <span>Banque Misr - Intern Software QA/QC Engineer</span>
-                  <span className="text-lg body-secondary lg:text-xl mt-1 lg:mt-0">
+                  <span className="text-lg text-zinc-400 lg:text-xl mt-1 lg:mt-0">
                     Summer '24
                   </span>
                 </h3>
               </div>
             </div>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-4 leading-relaxed">
               Developed strong skills in automated & manual testing, learned
               about Agile methodologies, and various testing techniques.
               Contributed to ensuring software quality and efficiency through
               hands-on experience with industry-standard tools and processes.
             </p>
             <ul className="space-y-2">
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Collaborated within an Agile framework to enhance software
                 quality
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Automated testing processes using Cypress
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Managed testing workflows using Jira and Zephyr Scale
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Learned about both manual testing & automation
               </li>
             </ul>
@@ -119,26 +119,26 @@ function Resume() {
                 alt="CIB"
                 width={64}
                 height={64}
-                className="experienceImg"
+                className="rounded-xl bg-white/10 p-2 border border-white/10 flex-shrink-0"
               />
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-2 text-white flex flex-col lg:flex-row lg:justify-between lg:items-center">
                   <span>Commercial International Bank - Internship Trainee</span>
-                  <span className="text-lg body-secondary lg:text-xl mt-1 lg:mt-0">
+                  <span className="text-lg text-zinc-400 lg:text-xl mt-1 lg:mt-0">
                     Summer '24
                   </span>
                 </h3>
               </div>
             </div>
             <ul className="space-y-2">
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Explored Topics such as Data Literacy, Data Analytics &
                 Cybersecurity
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Learned About the Digital Transformation at CIB
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Gained knowledge around fintech and banking sector operations
               </li>
             </ul>
@@ -151,24 +151,24 @@ function Resume() {
                 alt="Open Source Community"
                 width={64}
                 height={64}
-                className="experienceImg"
+                className="rounded-xl bg-white/10 p-2 border border-white/10 flex-shrink-0"
               />
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200">
+                <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-2 text-white">
                   Open Source Community FCIS - Web Dev. Team Member
                 </h3>
               </div>
             </div>
             <ul className="space-y-2">
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Delivered multiple sessions and lectures on various web
                 development topics
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Contributed to the development of a community web app using
                 the MERN Stack
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-400">
                 • Worked closely with developers from various teams to ensure
                 project success
               </li>
@@ -177,16 +177,16 @@ function Resume() {
 
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="flex items-center gap-6 mb-6">
-              <div className="w-16 h-16 rounded-lg bg-gradient-to-b from-blue-600 to-yellow-100 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+              <div className="w-16 h-16 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white font-InstrumentSerif text-2xl flex-shrink-0">
                 F
               </div>
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-zinc-800 dark:text-zinc-200">
+                <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-2 text-white">
                   Freelance Graphic Design
                 </h3>
               </div>
             </div>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+            <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
               Worked on creating many designs for multiple clients (Mostly
               gaming community-related)
             </p>
@@ -203,32 +203,32 @@ function Resume() {
           <hr className="splitter"/>
 
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-zinc-800 dark:text-zinc-200 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+            <h3 className="text-xl md:text-2xl font-InstrumentSerif mb-3 text-white flex flex-col lg:flex-row lg:justify-between lg:items-center">
               <span>Repai</span>
-              <span className="text-lg body-secondary lg:text-xl mt-1 lg:mt-0">
+              <span className="text-lg text-zinc-400 lg:text-xl mt-1 lg:mt-0">
                 Finalist @ Google GDG Finance AI Hackathon
               </span>
             </h3>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-4 leading-relaxed">
               An AI-powered recycling platform that incentivizes eco-friendly
               behavior through cashback rewards on a digital wallet. The app
               uses real-time object detection to identify recyclables, calculate
               value, and facilitate convenient collection or redemption.
             </p>
             <ul className="space-y-2">
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-300">
                 • Used Image Detection & Google Gemini for object detection of
                 recyclable materials
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-300">
                 • Assigned real-time, market-based value to scanned items based
                 on materials, size & more
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-300">
                 • Enabled cashback accumulation and redemption through
                 eco-partner locations or collector pickups
               </li>
-              <li className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+              <li className="text-base md:text-lg text-zinc-300">
                 • Promoted sustainable habits through AI-driven automation and
                 user rewards
               </li>
@@ -242,7 +242,7 @@ function Resume() {
                 NASA SPACE APPS 2024
               </span>
             </h3>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-4 leading-relaxed">
               A NASA Space Apps 2024 3D Web App (Built using Next.js + The
               powerful Three.js library) which brings space exploration to the
               masses, made with the classroom in mind, Orbit provides a unique
@@ -252,13 +252,13 @@ function Resume() {
               AI powered chat buddy to interact with and answer questions to
               boost and enhance the learning experience.
             </p>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-3 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-3 leading-relaxed">
               Built an AI chatbot app using Gemini 2.0 Flash, Contributed to
               mapping the planets & their orbits using complex equations,
               rendering them using Three.JS, adding description screens and
               labels to the celestial bodies and scene controls.
             </p>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+            <p className="text-base md:text-lg text-zinc-300">
               Received a Galactic Problem Solver certificate as recognition for
               the effort.
             </p>
@@ -271,16 +271,16 @@ function Resume() {
                 NASA SPACE APPS 2023
               </span>
             </h3>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-3 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-3 leading-relaxed">
               A NASA Space Apps 2023 AI project that predicts natural disasters
               intensity and possible path using the latest satellite data and
               gives early warnings to potentially affected regions.
             </p>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-3 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 mb-3 leading-relaxed">
               Contributed to designing the interface, gathering and mapping data
               obtained from the model's output.
             </p>
-            <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
+            <p className="text-base md:text-lg text-zinc-300">
               Received a Galactic Problem Solver certificate as recognition for
               the effort.
             </p>
@@ -297,40 +297,40 @@ function Resume() {
           <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="space-y-4">
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Programming:
                 </span>{" "}
                 Proficient in JavaScript, TypeScript, React.js, Next.js,
                 Angular, Tailwind CSS, Bootstrap, Node.js, MongoDB, SQL, Python,
                 C, C++, PHP, Go, Java
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Software Testing:
                 </span>{" "}
                 Cypress, Selenium (basics), Manual (HLS, Test Cases..), Zephyr
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Version Control:
                 </span>{" "}
                 Git, GitHub, GitLab
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Agile Methodology:
                 </span>{" "}
                 Knowledgeable in Agile practices and work environments
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Graphic Design/UI:
                 </span>{" "}
                 Adobe Photoshop, Adobe Illustrator & Figma
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Soft Skills:
                 </span>{" "}
                 Quick learner with strong adaptability, problem-solving
@@ -350,20 +350,20 @@ function Resume() {
           <hr className="splitter"/>
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="space-y-4">
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Programming:
                 </span>{" "}
                 I mostly do fun projects to challenge myself and learn.
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Motorsport:
                 </span>{" "}
                 Passionate about everything motorsports, especially Formula 1.
               </p>
-              <p className="text-base md:text-lg text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+              <p className="text-base md:text-lg text-zinc-300">
+                <span className="font-semibold text-white">
                   Gaming:
                 </span>{" "}
                 A bit of competitive fun.

@@ -17,6 +17,11 @@ export const Route = createRootRoute({
       { title: "Ahmed Khaled - swe & cs student" },
       { name: "description", content: "Computer Science student, chronically online. Building innovative solutions." }
     ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=VT323&display=swap" },
+    ],
   }),
   component: RootLayout,
   notFoundComponent: () => <div>Not Found</div>,
@@ -29,7 +34,7 @@ function RootLayout() {
       <head>
         <HeadContent />
       </head>
-      <body className="grid-overlay flex flex-col min-h-screen antialiased bg-top bg-no-repeat bg-cover bg-bg bg-neutral-50 dark:bg-neutral-900 font-fustat" suppressHydrationWarning>
+      <body className="grid-overlay flex flex-col min-h-screen antialiased font-fustat" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <SmoothScroll />
           <div className="flex-1">

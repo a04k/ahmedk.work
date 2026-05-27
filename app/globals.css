@@ -61,18 +61,28 @@
 
 @layer base {
   * {
-    @apply border-zinc-200 dark:border-zinc-800;
+    @apply border-zinc-200/40 dark:border-zinc-700/40;
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-image: url('/images/bg.webp') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-color: #0d0d11 !important;
+    color: #f4f4f5;
     font-feature-settings:
       "rlig" 1,
-      "calt" 1;
+      "calt" 1,
+      "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: #0d0d11;
   }
 
   body.grid-overlay {
@@ -84,45 +94,85 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
+    opacity: var(--grid-on, 0);
     background-image:
       linear-gradient(
         to right,
-        hsl(var(--foreground) / 0.06) 1px,
+        rgba(255, 255, 255, 0.04) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        hsl(var(--foreground) / 0.06) 1px,
+        rgba(255, 255, 255, 0.04) 1px,
         transparent 1px
       );
-    background-size: 32px 32px;
-    mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 50%, transparent 80%);
     -webkit-mask-image: radial-gradient(
       ellipse at center,
-      black 60%,
-      transparent 100%
+      black 50%,
+      transparent 80%
+    );
+  }
+
+  body.grid-overlay::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.1) 100%
     );
   }
 }
 
 @layer components {
-  /* Box generation utility class */
+  /* Apple Liquid Glass from iOS 26 - High-fidelity premium glassmorphism styling */
   .box-gen {
-    @apply border border-zinc-200/60 dark:border-zinc-800/60 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+    backdrop-filter: blur(16px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+    box-shadow:
+      0 12px 32px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .box-gen:hover {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+    box-shadow:
+      0 20px 48px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* Group hover blur effect - uses raw CSS to avoid Tailwind purge issues */
+  .group:hover .group-hover-blur {
+    filter: blur(4px);
+  }
+  .group-hover-blur {
+    transition: filter 0.3s ease;
   }
 
   /* Body text utilities */
   .body-primary {
-    @apply text-zinc-900 dark:text-zinc-100;
+    @apply text-zinc-100;
   }
 
   .body-secondary {
-    @apply text-zinc-600 dark:text-zinc-400;
+    @apply text-zinc-200;
   }
 
   .title-primary {
-    @apply text-zinc-900 dark:text-zinc-100;
+    @apply text-white;
   }
 
   /* Resume-specific styles */
@@ -139,68 +189,88 @@
   }
 
   .resumeContentTitle {
-    @apply text-lg font-InstrumentSerif mb-2 text-zinc-800 dark:text-zinc-200;
+    @apply text-lg font-InstrumentSerif mb-2 text-zinc-200;
   }
 
   .resumeContent {
-    @apply text-zinc-700 dark:text-zinc-300 mb-1;
+    @apply text-zinc-300 mb-1;
   }
 
   .resumePoint {
-    @apply font-semibold text-zinc-800 dark:text-zinc-200;
+    @apply font-semibold text-zinc-200;
   }
 
   .splitter {
-    @apply border-neutral-500 mb-8;
+    @apply border-zinc-700 mb-8;
   }
 
   .experienceImg {
-    @apply rounded-2xl bg-white p-2 border border-zinc-200 dark:border-zinc-700 flex-shrink-0;
+    @apply rounded-2xl bg-white/10 p-2 border border-white/10 flex-shrink-0;
   }
 
   .skill {
-    @apply mb-2 text-zinc-700 dark:text-zinc-300;
+    @apply mb-2 text-zinc-300;
   }
 
-  /* Prose styles */
+  /* Article prose styles - editorial reading experience */
   .prose {
     @apply max-w-none;
   }
 
   .prose h1 {
-    @apply text-6xl md:text-7xl font-normal text-foreground font-InstrumentSerif;
+    @apply text-5xl md:text-6xl font-normal text-white font-InstrumentSerif leading-tight;
   }
 
   .prose h2 {
-    @apply text-5xl md:text-6xl font-normal text-foreground font-InstrumentSerif mt-12 mb-6;
+    @apply text-3xl md:text-4xl font-normal text-white font-InstrumentSerif mt-14 mb-6 leading-tight;
   }
 
   .prose h3 {
-    @apply text-3xl md:text-4xl font-normal text-foreground font-InstrumentSerif mt-10 mb-4;
+    @apply text-2xl md:text-3xl font-normal text-white font-InstrumentSerif mt-10 mb-4 leading-snug;
   }
 
   .prose h4 {
-    @apply text-2xl md:text-3xl font-normal text-foreground font-InstrumentSerif mt-8 mb-4;
+    @apply text-xl md:text-2xl font-normal text-white font-InstrumentSerif mt-8 mb-4 leading-snug;
   }
 
   .prose p {
-    @apply text-muted-foreground;
+    @apply text-zinc-300 leading-relaxed text-base md:text-lg;
   }
 
   .prose a {
-    @apply text-primary hover:text-primary/80 no-underline;
+    @apply text-zinc-100 underline decoration-zinc-500/40 underline-offset-4 hover:decoration-zinc-100 transition-all duration-300;
   }
 
   .prose code {
-    @apply bg-muted px-1.5 py-0.5 rounded text-sm;
+    @apply bg-white/10 px-2 py-0.5 rounded text-sm text-zinc-200;
   }
 
   .prose pre {
-    @apply bg-muted border rounded-lg;
+    @apply bg-black/40 border border-white/10 rounded-xl p-6;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-primary/20 pl-4 italic;
+    @apply border-l-2 border-zinc-500/40 pl-6 italic text-zinc-300;
+  }
+
+  .prose ul, .prose ol {
+    @apply text-zinc-300 leading-relaxed;
+  }
+
+  .prose li {
+    @apply text-zinc-300 leading-relaxed my-2;
+  }
+
+  .prose strong {
+    @apply text-white font-semibold;
+  }
+
+  .prose hr {
+    @apply border-zinc-700/60 my-16;
+  }
+
+  .prose img {
+    @apply rounded-2xl my-10;
   }
 
   @font-face {

@@ -15,9 +15,10 @@ export default {
         inter: ["Inter", "sans-serif"],
         InstrumentSerif: ["Instrument Serif", "serif"],
         InstrumentSerifItalic: ["Instrument Serif Italic", "serif"],
+        pixel: ['"VT323"', "monospace"],
       },
       backgroundImage: {
-        "bg": "url('/images/bg.webp')",
+        bg: "url('/images/bg.webp')",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -81,7 +82,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        DEFAULT: "0px 3px 6px -3px rgba(0,0,0,.05),0px 2px 4px -2px rgba(0,0,0,.05),0px 1px 2px -1px rgba(0,0,0,.05),0px 1px 1px -1px rgba(0,0,0,.05),0px 1px 0px -1px rgba(0,0,0,.05)",
+        DEFAULT:
+          "0px 3px 6px -3px rgba(0,0,0,.05),0px 2px 4px -2px rgba(0,0,0,.05),0px 1px 2px -1px rgba(0,0,0,.05),0px 1px 1px -1px rgba(0,0,0,.05),0px 1px 0px -1px rgba(0,0,0,.05)",
       },
       fontSize: {
         xs: ["0.8125rem", { lineHeight: "1.5rem" }],
@@ -100,5 +102,20 @@ export default {
       },
     },
   },
+  safelist: [
+    "blur-none",
+    "blur-sm",
+    "blur-0",
+    "backdrop-blur-sm",
+    "backdrop-blur-md",
+    "backdrop-blur-lg",
+    "bg-white/5",
+    "bg-white/10",
+    "bg-white/20",
+    "bg-white/30",
+    "group-hover:blur-sm",
+    "group-hover:opacity-20",
+    "group-hover:scale-95",
+  ],
   plugins: [require("@tailwindcss/typography")],
-}
+};

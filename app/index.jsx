@@ -37,8 +37,8 @@ function Home() {
           <BlurTitle delay={75}>
             <DecryptedText
               text={config.name}
-              className="text-6xl md:text-8xl lg:text-9xl text-neutral-900 font-InstrumentSerif dark:text-white leading-tight"
-              encryptedClassName="text-6xl md:text-8xl lg:text-9xl text-neutral-500 font-InstrumentSerif dark:text-neutral-700 font-bold"
+              className="text-6xl md:text-8xl lg:text-9xl text-white font-InstrumentSerif leading-none tracking-tight"
+              encryptedClassName="text-6xl md:text-8xl lg:text-9xl text-zinc-600 font-InstrumentSerif leading-none tracking-tight"
               parentClassName=""
               animateOn="view"
               sequential={true}
@@ -48,8 +48,8 @@ function Home() {
           <BlurTitle delay={100} className="-mt-2">
             <DecryptedText
               text={config.description}
-              className="text-[0.875rem] md:text-base dark:text-neutral-300 font-mono m-0"
-              encryptedClassName="text-[0.875rem] md:text-base text-neutral-500 font-mono m-0"
+              className="text-base md:text-lg text-zinc-300 font-pixel leading-relaxed m-0"
+              encryptedClassName="text-base md:text-lg text-zinc-600 font-pixel leading-relaxed m-0"
               parentClassName=""
               animateOn="view"
               sequential={true}
