@@ -19,7 +19,7 @@ function Resume() {
             <h1 className="text-7xl lg:text-7xl xl:text-8xl font-InstrumentSerif title-primary">
               Ahmed Khaled
             </h1>
-            <h2 className="text-xs md:text-sm text-zinc-400 font-pixel leading-relaxed mt-2">
+            <h2 className="text-sm md:text-base text-zinc-400 font-pixel leading-relaxed mt-0">
               Computer Science Student & Software Engineer
             </h2>
           </div>

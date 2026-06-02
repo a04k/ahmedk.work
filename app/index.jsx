@@ -6,7 +6,6 @@ import { GitHubActivity } from "@/components/cards/GitHubCard";
 import Stack from "@/components/cards/StackCard";
 import StackProject from "@/components/cards/project/CardHome";
 import Resume from "@/components/cards/resume/ResumeCard";
-import { StatusWork } from "@/components/sections/StatusWork";
 import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import { Container } from "@/components/ui/Container";
@@ -32,12 +31,12 @@ function Home() {
   return (
     <>
       <Container className="mt-16 sm:mt-16">
-        <div className="max-w-3xl">
-          <StatusWork isAvailable={isAvailable} className="mb-4" />
+        <div className="max-w-3xl drop-shadow-[0_10px_35px_rgba(0,0,0,0.7)]">
+
           <BlurTitle delay={75}>
             <DecryptedText
               text={config.name}
-              className="text-6xl md:text-8xl lg:text-9xl text-white font-InstrumentSerif leading-none tracking-tight"
+              className="text-6xl md:text-8xl lg:text-9xl font-InstrumentSerif leading-none tracking-tight text-shine"
               encryptedClassName="text-6xl md:text-8xl lg:text-9xl text-zinc-600 font-InstrumentSerif leading-none tracking-tight"
               parentClassName=""
               animateOn="view"
@@ -48,8 +47,8 @@ function Home() {
           <BlurTitle delay={100} className="-mt-2">
             <DecryptedText
               text={config.description}
-              className="text-base md:text-lg text-zinc-300 font-pixel leading-relaxed m-0"
-              encryptedClassName="text-base md:text-lg text-zinc-600 font-pixel leading-relaxed m-0"
+              className="text-base md:text-lg text-zinc-100 font-pixel leading-relaxed m-0"
+              encryptedClassName="text-base md:text-lg text-zinc-400 font-pixel leading-relaxed m-0"
               parentClassName=""
               animateOn="view"
               sequential={true}

@@ -23,7 +23,7 @@ function ArticleCard({ post, home, className }) {
         ))}
       </div>
 
-      <Card.Description className="line-clamp-3 md:line-clamp-4 text-zinc-400">{post.description}</Card.Description>
+      <Card.Description className="line-clamp-3 md:line-clamp-4 text-zinc-200">{post.description}</Card.Description>
     </Card>
   )
 }

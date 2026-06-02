@@ -70,7 +70,7 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-InstrumentSerif text-white leading-tight mb-4">
             Let's work together
           </h2>
-          <p className="mt-4 text-base md:text-lg leading-relaxed text-zinc-300 font-fustat">
+          <p className="mt-4 text-sm md:text-base leading-relaxed text-zinc-300 font-pixel">
             I'm currently available for freelance projects and open to new
             opportunities. If you have a project in mind or just want to say hi,
             feel free to reach out.
@@ -117,7 +117,7 @@ export default function ContactSection() {
                         {...register("name")}
                         type="text"
                         placeholder="Name"
-                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 text-sm"
+                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-300 text-sm"
                       />
                       {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name.message}</p>}
                     </div>
@@ -126,7 +126,7 @@ export default function ContactSection() {
                         {...register("email")}
                         type="email"
                         placeholder="Email"
-                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 text-sm"
+                        className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-300 text-sm"
                       />
                       {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email.message}</p>}
                     </div>
@@ -136,12 +136,12 @@ export default function ContactSection() {
                       {...register("message")}
                       rows={3}
                       placeholder="Message"
-                      className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-500 resize-none text-sm"
+                      className="w-full px-4 py-3 rounded-xl box-gen focus:outline-none focus:ring-1 focus:ring-white/30 transition-all text-white placeholder-zinc-300 resize-none text-sm"
                     />
                     {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message.message}</p>}
                   </div>
                   <div className="flex items-center justify-between mt-2">
-                    <Link to="/contact" className="text-sm text-zinc-500 hover:text-white transition-colors flex items-center gap-1">
+                    <Link to="/contact" className="text-sm text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
                       <span>Full form</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </Link>

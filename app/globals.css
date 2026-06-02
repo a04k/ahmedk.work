@@ -134,19 +134,19 @@
 @layer components {
   /* Apple Liquid Glass from iOS 26 - High-fidelity premium glassmorphism styling */
   .box-gen {
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
-    @apply backdrop-blur-[12px] backdrop-saturate-[180%];
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.05) 100%) !important;
+    @apply backdrop-blur-[10px];
     box-shadow:
-      0 12px 32px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.2) !important;
+      0 12px 32px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1) !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
   .box-gen:hover {
-    border-color: rgba(255, 255, 255, 0.15) !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0) 100%) !important;
     box-shadow:
       0 20px 48px rgba(0, 0, 0, 0.45),
       inset 0 1px 0 rgba(255, 255, 255, 0.25),
@@ -296,4 +296,18 @@
     font-family: "Instrument Serif Italic";
     src: url("/fonts/InstrumentSerif-Italic.ttf");
   }
+}
+
+.text-shine {
+  background-image: linear-gradient(
+    100deg,
+    #fde68a 0%,
+    #fef3c7 50%,
+    #fffbeb 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(254, 243, 199, 0.25);
 }
