@@ -165,7 +165,7 @@ function GitHubActivity({ className, username = "a04k" }) {
     >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <a href={config.socialLinks.github}>
+          <a href={config.socialLinks.github} aria-label="GitHub profile">
             <Github className="w-5 h-5 text-neutral-600 dark:text-neutral-400" />
           </a>
           <span className="text-sm text-neutral-600 dark:text-neutral-300">

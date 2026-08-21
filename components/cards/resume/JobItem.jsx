@@ -12,11 +12,11 @@ export function JobItem({ role, roleIndex }) {
       <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         {role.logo ? (
           <Image
-            width={20}
-            height={20}
+            width={40}
+            height={40}
             src={role.logo || "/placeholder.svg"}
             alt={role.title}
-            className="w-10 h-10 rounded-md"
+            className="h-full w-full rounded-md object-cover"
             priority={roleIndex <= 1}
           />
         ) : (

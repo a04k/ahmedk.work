@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { ProjectCardGal } from "@/components/cards/project/ProjectCard"
 import { SimpleLayout } from "@/components/ui/SimpleLayout"
+import { BackButton } from '@/components/ui/BackButton'
 
 const fetchProjects = createServerFn().handler(async () => {
   const { getAllProjects } = await import('@/lib/server/content')
@@ -21,6 +22,7 @@ function Projects() {
       <SimpleLayout
         title="Projects I've built on my journey"
         intro="I've worked on many small and large projects over the years, but these are the ones I'm most proud of. From AI-powered applications at hackathons to Personal and University Projects, each project represents a unique challenge and learning experience."
+        lead={<BackButton to="/" />}
       >
         <h2 className="mb-10 text-2xl md:text-3xl font-InstrumentSerif text-white">Featured Projects</h2>
 

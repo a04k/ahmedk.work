@@ -1,9 +1,10 @@
 import { Container } from '@/components/ui/Container'
 import BlurTitle from "@/components/ui/BlurTitle"
 
-export function SimpleLayout({ title, intro, children }) {
+export function SimpleLayout({ title, intro, children, lead }) {
   return (
     <Container className="mt-16 sm:mt-24">
+      {lead}
       <BlurTitle delay={50}>
         <header className="max-w-full">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-InstrumentSerif text-white leading-none text-balance">

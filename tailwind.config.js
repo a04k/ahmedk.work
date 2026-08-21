@@ -102,20 +102,8 @@ export default {
       },
     },
   },
-  safelist: [
-    "blur-none",
-    "blur-sm",
-    "blur-0",
-    "backdrop-blur-sm",
-    "backdrop-blur-md",
-    "backdrop-blur-lg",
-    "bg-white/5",
-    "bg-white/10",
-    "bg-white/20",
-    "bg-white/30",
-    "group-hover:blur-sm",
-    "group-hover:opacity-20",
-    "group-hover:scale-95",
-  ],
+  // NOTE: no safelist — every previously-safelisted class is either present
+  // literally in scanned files (so Tailwind generates it anyway) or was never
+  // used. A safelist here forced ~14KiB of dead CSS into production.
   plugins: [require("@tailwindcss/typography")],
 };

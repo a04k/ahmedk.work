@@ -51,6 +51,7 @@ export function SpotifyPlayer({ className }) {
           href={nowPlayingData.songUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`Play ${nowPlayingData.songName} on Spotify`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
