@@ -39,7 +39,7 @@ function Resume() {
           <div className="resumeItem box-gen p-6 rounded-lg">
             <div className="flex items-center gap-6 ">
               <Image
-                src="/images/companies/asu.png"
+                src="/images/companies/asu.webp"
                 alt="Ain Shams University"
                 width={64}
                 height={64}

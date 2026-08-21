@@ -18,7 +18,7 @@ export const stacks = [
     title: "Angular",
     link: "https://angular.dev/",
     info: "",
-    img: "/images/logos/angular.png",
+    img: "/images/logos/angular.webp",
   },
   {
     type: "development",
@@ -46,7 +46,7 @@ export const stacks = [
     title: "Node.js",
     link: "https://nodejs.org/",
     info: "Backend development stack for building robust APIs and server-side applications.",
-    img: "/images/logos/node.png",
+    img: "/images/logos/node.webp",
   },
   {
     type: "development",
@@ -60,14 +60,14 @@ export const stacks = [
     title: "MySQL",
     link: "https://mysql.com",
     info: "Used lots for Uni projects, nice to learn with",
-    img: "/images/logos/mysql.png",
+    img: "/images/logos/mysql.webp",
   },
   {
     type: "development",
     title: "PostgreSQL",
     link: "https://postgresql.org",
     info: "My go-to DB for most projects that require an SQL DB",
-    img: "/images/logos/pg.png",
+    img: "/images/logos/pg.webp",
   },
 
   {

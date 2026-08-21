@@ -45,27 +45,27 @@ const variants = {
 const projectList = [
   {
     title: "Current Portfolio Website",
-    cover: "/images/projects/portfolio.png",
+    cover: "/images/projects/portfolio.webp",
     publishedAt: "2025-06-01",
   },
   {
     title: "Old portfolio",
-    cover: "/images/projects/oldfolio.png",
+    cover: "/images/projects/oldfolio.webp",
     publishedAt: "2024-06-01",
   },
   {
     title: "repAI",
-    cover: "/images/projects/repai1.png",
+    cover: "/images/projects/repai1.webp",
     publishedAt: "2025-02-29",
   },
   {
     title: "Orbit",
-    cover: "/images/projects/orbit2.png",
+    cover: "/images/projects/orbit2.webp",
     publishedAt: "2024-10-05",
   },
   // {
   //   title: "Orbit",
-  //   cover: "/images/projects/orbit1.png",
+  //   cover: "/images/projects/orbit1.webp",
   //   publishedAt: "2024-10-05",
   // },
 ];

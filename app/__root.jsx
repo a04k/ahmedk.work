@@ -18,9 +18,10 @@ export const Route = createRootRoute({
       { name: "description", content: "Computer Science student, chronically online. Building innovative solutions." }
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=VT323&display=swap" },
+      // Fonts are self-hosted (see @font-face in globals.css); VT323 no longer
+      // loads from Google Fonts, which was a render-blocking third-party request.
+      { rel: "preload", href: "/fonts/Fustat.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: "/fonts/InstrumentSerif-Regular.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
     ],
   }),
   component: RootLayout,

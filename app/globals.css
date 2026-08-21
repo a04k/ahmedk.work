@@ -65,11 +65,6 @@
   }
 
   body {
-    background-image: url('/images/bg.webp') !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-color: #0d0d11 !important;
     color: #f4f4f5;
     font-feature-settings:
       "rlig" 1,
@@ -83,6 +78,20 @@
   html {
     scroll-behavior: smooth;
     background-color: #0d0d11;
+  }
+
+  /* Fixed background layer — replaces `background-attachment: fixed` on body,
+     which forces full-viewport repaints on every scroll frame (Firefox) and is
+     ignored on iOS Safari. A position:fixed layer is composited instead. */
+  html::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("/images/bg.webp");
+    background-size: cover;
+    background-position: center;
   }
 
   body.grid-overlay {
@@ -138,8 +147,11 @@
   .box-gen {
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.05) 100%) !important;
-    backdrop-filter: blur(6px) saturate(140%);
-    -webkit-backdrop-filter: blur(6px) saturate(140%);
+    /* MUST use @apply here, never raw backdrop-filter declarations: the production
+       CSS minifier collapses `backdrop-filter` + `-webkit-backdrop-filter` into the
+       prefixed property only, which Firefox ignores (blur disappears site-wide).
+       Tailwind's var()-based output survives minification. */
+    @apply backdrop-blur-[6px] backdrop-saturate-[140%];
     box-shadow:
       0 12px 32px rgba(0, 0, 0, 0.25),
       inset 0 1px 0 rgba(255, 255, 255, 0.1),
@@ -147,8 +159,6 @@
     transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
                 background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
                 box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    will-change: transform;
-    transform: translateZ(0);
   }
 
   .box-gen:hover {
@@ -280,32 +290,26 @@
   }
 
   @font-face {
-    font-family: "Switzer";
-    src: url("/fonts/Switzer.woff2") format("woff2");
+    font-family: "VT323";
+    src: url("/fonts/VT323-latin.woff2") format("woff2");
     font-display: swap;
   }
 
   @font-face {
     font-family: "Fustat";
-    src: url("/fonts/Fustat.ttf") format("truetype");
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter-Bold.ttf") format("truetype");
+    src: url("/fonts/Fustat.woff2") format("woff2");
     font-display: swap;
   }
 
   @font-face {
     font-family: "Instrument Serif";
-    src: url("/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+    src: url("/fonts/InstrumentSerif-Regular.woff2") format("woff2");
     font-display: swap;
   }
 
   @font-face {
     font-family: "Instrument Serif Italic";
-    src: url("/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+    src: url("/fonts/InstrumentSerif-Italic.woff2") format("woff2");
     font-display: swap;
   }
 }
