@@ -5,7 +5,10 @@ export function Pill({ className, children, icon }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center h-8 gap-2 px-3 text-sm leading-5 whitespace-nowrap box-gen rounded-2xl",
+        // Lightweight surface instead of .box-gen: pills always sit inside a
+        // glass Card, so a nested backdrop-filter doubles the blur cost for an
+        // imperceptible visual difference.
+        "inline-flex items-center h-8 gap-2 px-3 text-sm leading-5 whitespace-nowrap rounded-2xl border border-white/10 bg-white/5 shadow-[0_1px_0_rgba(255,255,255,0.08)_inset]",
         className,
       )}
     >

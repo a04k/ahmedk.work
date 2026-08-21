@@ -22,6 +22,10 @@ export const Route = createRootRoute({
       { rel: "preload", href: "/fonts/Fustat.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "preload", href: "/fonts/InstrumentSerif-Regular.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "preload", href: "/fonts/VT323-latin.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      // The fixed html::before background is what every .box-gen backdrop-filter
+      // samples — without preloading it, glass renders over flat color and the
+      // blur visibly pops in when the image finally arrives.
+      { rel: "preload", href: "/images/bg.webp", as: "image", fetchPriority: "high" },
     ],
   }),
   component: RootLayout,

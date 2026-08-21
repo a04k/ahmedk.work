@@ -3,14 +3,8 @@ import { useRef } from "react"
 import { Image } from "@unpic/react";
 import { motion } from "framer-motion"
 
-export function JobItem({ role, scrollPosition, heightItem, roleIndex }) {
+export function JobItem({ role, roleIndex }) {
   const ref = useRef(null)
-
-  const distance = role.index * heightItem
-  const offset = scrollPosition - distance
-
-  const blurtwo = 0
-  const opacity = 1
 
   const marginBoxTop = "last:mb-[128px]"
   return (

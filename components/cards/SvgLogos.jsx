@@ -98,7 +98,7 @@ function Reel({ items, duration = 20, reverse = false }) {
             aria-label={item.label}
             className="block w-full"
           >
-            <div className="group relative flex h-14 w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/20 bg-white/5 dark:bg-white/[0.04] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] hover:bg-white/15 dark:hover:bg-white/10 hover:border-white/50 dark:hover:border-white/40 transition-all duration-300">
+            <div className="group relative flex h-14 w-full items-center justify-center rounded-xl border border-white/30 dark:border-white/20 bg-white/5 dark:bg-white/[0.04] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] hover:bg-white/15 dark:hover:bg-white/10 hover:border-white/50 dark:hover:border-white/40 transition-all duration-300">
               {item.icon}
             </div>
           </Link>

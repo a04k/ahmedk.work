@@ -84,7 +84,7 @@ export function AppIcon({
       <motion.div
         ref={ref}
         style={{ width }}
-        className="z-30 flex items-center justify-center w-10 rounded-full bg-neutral-200/70 dark:bg-neutral-900/70 aspect-square box-gen "
+        className="z-30 flex items-center justify-center w-10 rounded-full bg-neutral-200/70 dark:bg-neutral-800 aspect-square ring-1 ring-white/10"
       >
           <Icon
             size={40}
