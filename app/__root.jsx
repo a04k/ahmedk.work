@@ -21,6 +21,7 @@ export const Route = createRootRoute({
       // loads from Google Fonts, which was a render-blocking third-party request.
       { rel: "preload", href: "/fonts/Fustat.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "preload", href: "/fonts/InstrumentSerif-Regular.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: "/fonts/VT323-latin.woff2", as: "font", type: "font/woff2", crossOrigin: "anonymous" },
     ],
   }),
   component: RootLayout,

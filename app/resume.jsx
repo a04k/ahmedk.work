@@ -74,7 +74,7 @@ function Resume() {
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
             <div className="flex items-center gap-6 mb-6">
               <Image
-                src="/images/companies/bm.png"
+                src="/images/companies/bm.webp"
                 alt="Banque Misr"
                 width={64}
                 height={64}
@@ -115,7 +115,7 @@ function Resume() {
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
             <div className="flex items-center gap-6 mb-6">
               <Image
-                src="/images/companies/cib.png"
+                src="/images/companies/cib.webp"
                 alt="CIB"
                 width={64}
                 height={64}
@@ -147,7 +147,7 @@ function Resume() {
           <div className="resumeItem box-gen p-6 rounded-lg mb-6">
             <div className="flex items-center gap-6 mb-6">
               <Image
-                src="/images/companies/osc.png"
+                src="/images/companies/osc.webp"
                 alt="Open Source Community"
                 width={64}
                 height={64}
