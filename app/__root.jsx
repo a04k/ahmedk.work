@@ -2,7 +2,6 @@ import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-r
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { FloatNav } from "@/components/nav/FloatNav"
 import Footer from "@/components/sections/Footer"
-import SmoothScroll from "@/components/SmoothScroll"
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css"
 
@@ -37,7 +36,6 @@ function RootLayout() {
       </head>
       <body className="grid-overlay flex flex-col min-h-screen antialiased font-fustat" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          <SmoothScroll />
           <div className="flex-1">
             <div className="relative mb-16 sm:mb-32">
               <main><Outlet /></main>
