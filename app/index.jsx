@@ -41,7 +41,7 @@ function Home() {
               parentClassName=""
               animateOn="view"
               sequential={true}
-              speed={60}
+              speed={24}
             />
           </BlurTitle>
           <BlurTitle delay={100} className="-mt-2">
@@ -52,7 +52,7 @@ function Home() {
               parentClassName=""
               animateOn="view"
               sequential={true}
-              speed={20}
+              speed={10}
               revealDirection="start"
             />
           </BlurTitle>
