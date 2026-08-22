@@ -24,6 +24,8 @@ const styles = {
  * Props:
  * - text: string
  * - speed?: number
+ * - charsPerTick?: number  (reveal N characters per interval — same cadence,
+ *   shorter total animation; keeps the LCP clock from running long)
  * - maxIterations?: number
  * - sequential?: boolean
  * - revealDirection?: "start" | "end" | "center"
@@ -37,6 +39,7 @@ const styles = {
 export default function DecryptedText({
   text,
   speed = 50,
+  charsPerTick = 1,
   maxIterations = 10,
   sequential = false,
   revealDirection = 'start',
@@ -136,9 +139,12 @@ export default function DecryptedText({
         setRevealedIndices((prevRevealed) => {
           if (sequential) {
             if (prevRevealed.size < text.length) {
-              const nextIndex = getNextIndex(prevRevealed)
               const newRevealed = new Set(prevRevealed)
-              newRevealed.add(nextIndex)
+              const remaining = text.length - prevRevealed.size
+              const batch = Math.min(charsPerTick, remaining)
+              for (let n = 0; n < batch; n++) {
+                newRevealed.add(getNextIndex(newRevealed))
+              }
               setDisplayText(shuffleText(text, newRevealed))
               return newRevealed
             } else {

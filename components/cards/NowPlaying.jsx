@@ -29,6 +29,8 @@ export function SpotifyPlayer({ className }) {
           <img
             width="64"
             height="64"
+            loading="lazy"
+            decoding="async"
             alt="Album cover"
             src={nowPlayingData.cover}
             className="absolute top-0 bottom-0 left-0 right-0 z-10 object-cover w-14 h-14 m-auto rounded-full aspect-square"

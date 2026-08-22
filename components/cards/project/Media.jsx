@@ -36,6 +36,8 @@ function Media({ cover, title, index, length }) {
         width={800}
         height={600}
         draggable={false}
+        loading="lazy"
+        decoding="async"
         style={{ opacity }}
         src={cover || "/placeholder.svg"}
         className="select-none rounded-xl"

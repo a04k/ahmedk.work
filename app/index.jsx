@@ -42,6 +42,7 @@ function Home() {
               animateOn="view"
               sequential={true}
               speed={60}
+              charsPerTick={3}
             />
           </BlurTitle>
           <BlurTitle delay={100} className="-mt-2">
