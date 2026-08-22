@@ -1,6 +1,5 @@
 
 import { Fragment } from "react";
-import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -8,38 +7,11 @@ import { Card } from "@/components/cards/Card";
 import Media from "@/components/cards/project/Media";
 import { Button } from "@/components/ui/Button";
 
-export const TRANSITION = { type: "spring", stiffness: 300, damping: 50 };
-
-const parantVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const variants = {
-  hidden: {
-    y: 1500,
-    opacity: 0,
-    scale: 1.5,
-    rotateY: 0,
-    rotateZ: 0,
-  },
-  visible: () => {
-    const rotate = -10 + Math.random() * 20;
-
-    return {
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      rotateZ: rotate,
-      rotateY: rotate / 10,
-      transition: TRANSITION,
-    };
-  },
-};
+// Entrance animation is pure CSS (.stack-enter in globals.css) so the cards
+// paint — and register LCP — without waiting for JS hydration. Framer-motion
+// only drives the mouse-parallax springs. Rotation is deterministic (the old
+// Math.random() variant caused SSR/client mismatches).
+const cardRotation = (i) => -8 + ((i * 7) % 16);
 
 // Mock projects data as fallback
 const projectList = [
@@ -82,27 +54,27 @@ function CardHome({ className, projects = projectList }) {
         Projects
       </Card.Pill>
       <div className="flex items-center justify-center w-full h-[220px]">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={parantVariants}
+        <div
           className="relative flex items-center justify-center transition group-hover-blur group-hover:scale-95"
           style={{ width: 260, height: 160 }}
         >
           {items.map((project, i) => {
             return (
               <Fragment key={i}>
-                <motion.div
-                  variants={variants}
-                  className="absolute"
-                  style={{ z: i * 200 }}
+                <div
+                  className="absolute stack-enter"
+                  style={{ zIndex: i * 200, "--stack-i": i }}
                 >
-                  <Media index={i} length={items.length} {...project} />
-                </motion.div>
+                  <div
+                    style={{ transform: `rotate(${cardRotation(i)}deg)` }}
+                  >
+                    <Media index={i} length={items.length} {...project} />
+                  </div>
+                </div>
               </Fragment>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Explore More Button */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">

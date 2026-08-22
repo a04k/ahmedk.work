@@ -357,3 +357,24 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 18px rgba(254, 243, 199, 0.25);
 }
+
+/* Project stack entrance (CardHome) — pure CSS so the cards paint and
+   register LCP without waiting for JS hydration. Framer-motion takes over
+   after the animation ends (inline parallax transforms resume). */
+@keyframes stack-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(140px) scale(1.18);
+  }
+}
+
+.stack-enter {
+  animation: stack-card-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--stack-i, 0) * 110ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-enter {
+    animation: none;
+  }
+}
